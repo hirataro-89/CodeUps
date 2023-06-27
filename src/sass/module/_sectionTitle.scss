@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.sectionTitle {
+    text-align: center;
+    font-weight: $normal;
+}
+
+.sectionTitle__main {
+    display: block;
+    text-transform: capitalize;
+    font-family: $second-font-family;
+    font-size: rem(32);
+    line-height: calc(40 / 32);
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+.sectionTitle__main::first-letter {
+    color: $accent-color;
+}
+
+.sectionTitle__sub {
+    color: $accent-color;
+    display: block;
+    font-size: rem(12);
+    line-height: calc(18 / 12);
+}
+
