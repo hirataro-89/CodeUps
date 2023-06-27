@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.cardLabel {
+    color: $accent-color;
+    font-size: rem(12);
+    border: 1px solid $accent-color;
+    line-height: calc(22 / 12);
+    padding: rem(5) rem(12);
+}
