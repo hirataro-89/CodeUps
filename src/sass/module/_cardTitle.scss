@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.cardTitle {
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $accent-color;
+}
