@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .cardLabel {
+    display: inline-block;
     color: $accent-color;
     font-size: rem(12);
     border: 1px solid $accent-color;
