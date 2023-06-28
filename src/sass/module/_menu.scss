@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.menu {
+
+}
+
+.menu__title {
+    font-size: rem(16);
+}
+
+.menu__list {
+    margin-top: rem(8);
+}
+
+.menu__item + .menu__item {
+    margin-top: rem(8);
+}
