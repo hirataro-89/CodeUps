@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.top-information {
+    background-color: $bg-blue;
+    position: relative;
+
+}
+.top-information__bg {
+}
+
+.top-information__inner {
+    padding: rem(80);
+    @include mq(md) {
+        padding: rem(100);
+    }
+}
+
+.top-information__title {
+
+}
+
+.top-information__media {
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}

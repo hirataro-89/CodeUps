@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.top-voice {
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
+}
+.top-voice__inner {
+    position: relative;
+}
+.top-voice__inner::before {
+    @include mq(md) {
+        content: "";
+        display: block;
+        width: 20.9vw;
+        max-width: rem(301);
+        aspect-ratio: 301 / 138;
+        background-image: url(../images/common/bg-fish2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -120px;
+
+        //  要検証
+        left: clamp(-5rem, -12.575rem + 15.36vw, 1.25rem);
+    }
+}
+.top-voice__inner::after {
+    @include mq(md) {
+        content: "";
+        display: block;
+        width: 4.93vw;
+        max-width: rem(71);
+        aspect-ratio: 71 / 162;
+        background-image: url(../images/common/bg-tatsu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: -67px;
+        right: 0;
+    }
+}
+.top-voice__title {
+
+}
+.top-voice__cards {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.top-voice__card {
+    max-width: rem(480);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md) {
+        max-width: rem(520);
+        width: 48.1418%;
+    }
+}
+.top-voice__card + .top-voice__card {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(40);
+    }
+}
+.top-voice__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
