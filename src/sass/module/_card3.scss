@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .card3 {
+    display: block;
 }
 
 .card3__inner {
@@ -21,7 +22,11 @@
 }
 
 .card3__info {
-
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .card3__meta {
@@ -46,6 +51,11 @@
     width: 48.2428115%;
     margin-left: rem(13);
     aspect-ratio: 151 / 117;
+    @include mq(md) {
+        aspect-ratio: 180 / 140;
+        width: 38.13559322%;
+        max-width: rem(180);
+    }
 }
 
 .card3__image img {
