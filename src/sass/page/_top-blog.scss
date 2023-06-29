@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.top-blog {
+    @include mq(md) {
+        background-image: url(../images/common/blog-bg.jpg);
+        background-size: 100% 60.2%;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+}
+
+.top-blog__inner {
+    margin-top: rem(80);
+    @include mq(md) {
+        padding-top: rem(100);
+    }
+}
+
+.top-blog__title {
+
+}
+
+.top-blog__cards {
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.top-blog__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
