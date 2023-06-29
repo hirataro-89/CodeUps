@@ -2,7 +2,10 @@
 
 .top-price {
     background-color: #DDF0F1;
-
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
 }
 
 .top-price__inner {
@@ -26,7 +29,7 @@
         position: absolute;
         bottom: 60px;
 
-        // 要検証
+        //  要検証
         left: clamp(-5rem, -12.575rem + 15.36vw, 1.25rem);
     }
 
