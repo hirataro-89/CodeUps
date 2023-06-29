@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.menus {
+
+}
+.menus__item {
+
+}
+.menus__item + .menus__item {
+    margin-top: rem(40);
+}
