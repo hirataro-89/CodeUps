@@ -18,6 +18,11 @@
     color: $accent-color;
 }
 
+.sectionTitle__main--large {
+    font-size: rem(80);
+    line-height: 1;
+}
+
 .sectionTitle__sub {
     color: $accent-color;
     display: block;
