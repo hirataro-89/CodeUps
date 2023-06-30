@@ -1,0 +1,123 @@
+@use "global" as *;
+
+.top-about {
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
+}
+
+.top-about__inner {
+    position: relative;
+}
+
+.top-about__inner::before {
+    @include mq(md) {
+        content: "";
+        display: block;
+        width: 30.35vw;
+        max-width: rem(194);
+        aspect-ratio: 194 / 181;
+        background-image: url(../images/common/bg-sango.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 10;
+        position: absolute;
+        bottom: -90px;
+
+        //  要検証
+        right: clamp(-96px, calc(10px + 16.4363vw), 0.625rem);
+    }
+}
+.top-about__title {
+    text-align: center;
+}
+
+.top-about__subtitle {
+    font-size: rem(40);
+    color: $accent-color;
+    line-height: 1;
+    font-family: $second-font-family;
+    font-weight: $normal;
+    @include mq(md) {
+        font-size: rem(80);
+        color: $white;
+        line-height: calc(100 / 80);
+    }
+}
+
+.top-about__box {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+        position: relative;
+    }
+}
+
+.top-about__body {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        display: flex;
+        // align-items: center;
+        max-width: rem(840);
+        width: 100%;
+    }
+}
+
+.top-about__content {
+    @include mq(md) {
+        max-width: rem(400);
+        width: 100%;
+        margin-left: rem(40);
+    }
+}
+
+.top-about__text {
+    margin-top: rem(16);
+    @include mq(md) {
+        margin-top: 0;
+        color: $white;
+    }
+}
+
+.top-about__button {
+    text-align: center;
+    margin-top: rem(40);
+}
+
+.top-about__images {
+
+}
+
+.top-about__image {
+    display: block;
+}
+
+.top-about__image img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.top-about__image--small {
+    aspect-ratio: 128 / 194;
+    width: calc(128 / 345) * 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.top-about__image--large {
+    aspect-ratio: 281 / 186;
+    width: calc(281 / 345) * 100%;
+    margin-top: -50%;
+    margin-left: auto;
+}
+
