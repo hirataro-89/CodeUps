@@ -3,7 +3,10 @@
 .top-information {
     background-color: $bg-blue;
     position: relative;
-
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
 }
 
 .top-information__inner {
