@@ -3,3 +3,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 });
+
+/* swiper mainView */
+const swiper = new Swiper('.mainView-swiper', {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+    },
+    effect: 'fade',
+    speed: 900
+});

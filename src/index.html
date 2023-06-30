@@ -26,14 +26,46 @@
       rel="stylesheet"
     />
     <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
     <header></header>
     <main class="top-main">
+      <div class="top-mainView">
+        <h1 class="top-mainView__title">
+          <span class="top-mainView__mainTitle">diving</span>
+          <span class="top-mainView__subTitle">into the ocean</span>
+        </h1>
+        <div class="top-mainView__swiper mainView-swiper" >
+          <div class="swiper-wrapper">
+            <picture class="top-mainView__image swiper-slide">
+                <source media="(max-width: 767px)" srcset="/assets/images/common/mv-sp1.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/common/mv-pc1.webp" type="image/webp">
+                <img width="375" height="667" loading="lazy" src="/assets/images/common/mv-sp1.jpg" alt="mvの画像1">
+            </picture>
+            <picture class="top-mainView__image swiper-slide">
+                <source media="(max-width: 767px)" srcset="/assets/images/common/mv-sp2.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/common/mv-pc2.webp" type="image/webp">
+                <img width="375" height="667" loading="lazy" src="/assets/images/common/mv-sp2.jpg" alt="mvの画像2">
+            </picture>
+            <picture class="top-mainView__image swiper-slide">
+                <source media="(max-width: 767px)" srcset="/assets/images/common/mv-sp3.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/common/mv-pc3.webp" type="image/webp">
+                <img width="375" height="667" loading="lazy" src="/assets/images/common/mv-sp3.jpg" alt="mvの画像3">
+            </picture>
+            <picture class="top-mainView__image swiper-slide">
+                <source media="(max-width: 767px)" srcset="/assets/images/common/mv-sp4.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/common/mv-pc4.webp" type="image/webp">
+                <img width="375" height="667" loading="lazy" src="/assets/images/common/mv-sp4.jpg" alt="mvの画像4">
+            </picture>
+          </div>
+        </div>
+      </div>
       <div class="spacer"></div>
       <div class="p-button">
         <a href="#" class="button">view more</a>
@@ -42,6 +74,52 @@
       <h3 class="cardTitle">ライセンス講座</h3>
       <div class="spacer"></div>
       <span class="cardLabel">ライセンス講習</span>
+      <section class="top-about">
+        <div class="top-about__inner inner">
+          <h2 class="top-about__title sectionTitle">
+            <span class="sectionTitle__main">about</span>
+            <span class="sectionTitle__sub">私たちについて</span>
+          </h2>
+          <div class="top-about__box">
+            <div class="top-about__body">
+              <h3 class="top-about__subtitle">Dive into<br />the Ocean</h3>
+              <div class="top-about__content">
+                <p class="top-about__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+                <p class="top-about__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <div class="top-about__button">
+                  <a href="#" class="button">view more</a>
+                </div>
+              </div>
+            </div>
+            <div class="top-about__images">
+              <picture class="top-about__image top-about__image--small">
+                <source srcset="/assets/images/common/about-small.webp" type="image/webp" />
+                <img
+                  width="128"
+                  height="194"
+                  loading="lazy"
+                  src="/assets/images/common/about-small.jpg"
+                  alt="aboutの画像2"
+                />
+              </picture>
+              <picture class="top-about__image top-about__image--large">
+                <source srcset="/assets/images/common/about-large.webp" type="image/webp" />
+                <img
+                  width="281"
+                  height="186"
+                  loading="lazy"
+                  src="/assets/images/common/about-large.jpg"
+                  alt="aboutの画像1"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="top-information">
         <div class="top-information__inner inner">
           <h2 class="top-information__title sectionTitle">
