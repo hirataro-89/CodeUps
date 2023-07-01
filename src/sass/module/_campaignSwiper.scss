@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.campaignSwiper {
+
+}
+
+.campaignSwiper__wrapper {
+    // box-shadow用
+    padding-bottom: rem(10);
+}
+
+.campaignSwiper__cards {
+
+}
+
+.campaignSwiper__card {
+    max-width: rem(280);
+    @include mq(md) {
+        min-width: rem(333);
+    }
+}
+.campaignSwiper__prev,
+.campaignSwiper__next {
+    display: none;
+    @include mq(md) {
+        top: 0;
+        margin-top: 0;
+        color: $accent-color;
+        background-color: $white;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 50%;
+        border: 1px solid $accent-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.campaignSwiper__prev {
+    left: inherit;
+    right: rem(185);
+}
+
+.campaignSwiper__next {
+    right: rem(25);
+}
+
+/* ボタンの矢印 */
+.campaignSwiper__prev::after,
+.campaignSwiper__next::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(40);
+    height: rem(6);
+    border-bottom: 1px solid $accent-color;
+}
+.campaignSwiper__prev::after {
+    border-left: 1px solid $accent-color;
+    transform: skew(-45deg) translateY(-50%);
+}
+
+
+.campaignSwiper__next::after {
+    border-right: 1px solid $accent-color;
+    transform: skew(45deg) translateY(-50%);
+}

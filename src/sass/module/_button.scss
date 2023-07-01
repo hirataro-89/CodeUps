@@ -20,8 +20,6 @@
     content: "";
     display: inline-block;
     position: absolute;
-}
-.button::after {
     width: rem(40);
     height: rem(6);
     border-bottom: 1px solid $white;
