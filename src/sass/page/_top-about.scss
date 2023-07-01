@@ -25,9 +25,7 @@
         z-index: 10;
         position: absolute;
         bottom: -90px;
-
-        //  要検証
-        right: clamp(-96px, calc(10px + 16.4363vw), 0.625rem);
+        left: clamp(rem(625), 14.42rem + 57.59vw, rem(1012));
     }
 }
 .top-about__title {

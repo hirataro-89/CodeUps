@@ -30,9 +30,7 @@
         background-size: contain;
         position: absolute;
         top: 24px;
-
-        //  要検証
-        left: clamp(-5rem, -12.575rem + 15.36vw, 1.25rem);
+        right: clamp(rem(525), 24.098rem + 32.74vw, rem(745));
     }
 }
 
