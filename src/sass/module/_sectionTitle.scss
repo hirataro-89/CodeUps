@@ -21,6 +21,9 @@
 .sectionTitle__main--large {
     font-size: rem(80);
     line-height: 1;
+    @include mq(md) {
+        font-size: rem(80);
+    }
 }
 
 .sectionTitle__sub {
