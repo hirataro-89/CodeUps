@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .campaignSwiper {
-
+    overflow: hidden;
 }
 
 .campaignSwiper__wrapper {
@@ -16,7 +16,7 @@
 .campaignSwiper__card {
     max-width: rem(280);
     @include mq(md) {
-        min-width: rem(333);
+        max-width: rem(333);
     }
 }
 .campaignSwiper__prev,

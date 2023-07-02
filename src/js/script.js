@@ -16,22 +16,27 @@ const mainviewSwiper = new Swiper('.mainViewSwiper', {
 /* swiper campaig */
 const campaignSwiper = new Swiper('.campaignSwiper__slide', {
     loop: true,
+    freeMode: true,
     speed: 900,
     autoplay: {
         delay: 4000,
         disableOnInteraction: false,
     },
+    slidesPerView: 1.25,
     spaceBetween: 24,
-    slidesPerView: 1.2,
-    /* pc時 */
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    /* pc, tab時 */
     breakpoints: {
         768: {
+            slidesPerView: 3.2,
+            spaceBetween: 20,
+        },
+        1440: {
             slidesPerView: 3.5,
             spaceBetween: 40,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
         }
     }
 });
