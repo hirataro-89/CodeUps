@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.page-toTop {
+    position: sticky;
+    bottom: rem(20);
+    margin-top: rem(36);
+    @include mq(md) {
+        margin-top: rem(60);
+    }
+}

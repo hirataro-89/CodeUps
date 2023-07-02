@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.toTop {
+    // position: sticky;
+    // bottom: rem(20);
+}
+
+.toTop a {
+    display: block;
+    color: $accent-color;
+    background-color: $white;
+    margin-right: rem(20);
+    margin-left: auto;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    border: 1px solid $accent-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.toTop a:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.toTop span {
+    display: inline-block;
+    width: rem(1);
+    height: rem(40);
+    border-left: 1px solid $accent-color;
+    position: relative;
+}
+
+.toTop span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    border-left: 1px solid $accent-color;
+    width: rem(10);
+    height: rem(10);
+    transform: translateX(calc(-50% - 1px)) rotate(45deg);
+}

@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -334,7 +336,7 @@
           <div class="top-campaign__button"><a href="#" class="button">view more</a></div>
         </div>
       </section>
-      <section class="top-about">
+      <section class="top-about js-toTopTrigger">
         <div class="top-about__inner inner">
           <h2 class="top-about__title sectionTitle">
             <span class="sectionTitle__main">about</span>
@@ -745,8 +747,13 @@
           </div>
         </div>
       </section>
+      <div class="page-toTop">
+        <div class="toTop js-toTop">
+          <a href="#top"><span></span></a>
+        </div>
+      </div>
     </main>
-    <footer class="footer">
+    <footer class="footer js-footer">
       <div class="footer__inner inner">
         <div class="footer__information">
           <div class="footer__logo"><a href="/"><img src="/assets/images/common/logo.svg" alt="ロゴ画像"></a></div>
