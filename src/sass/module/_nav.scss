@@ -1,39 +1,44 @@
 @use "global" as *;
 
 
-.spNav {
+.nav {
     color: $white;
     line-height: calc(18 / 16);
 }
 
-.spNav__wrapper {
+.nav__wrapper {
     display: flex;
     gap: rem(7);
 }
 
-.spNav__block {
+.nav__block {
     width: 50%;
+    @include mq(md) {
+        display: flex;
+    }
 }
 
-.spNav__list {
-
+.nav__list {
+    @include mq(md) {
+        width: 50%;
+    }
 }
 
-.spNav__item {
+.nav__item {
     font-weight: $bold;
     position: relative;
     margin-left: rem(22);
 }
 
-.spNav__item + .spNav__item {
-    margin-top: rem(28);
+.nav__item + .nav__item {
+    margin-top: rem(16);
 }
 
-.spNav__item a {
+.nav__item a {
     display: block;
     padding: rem(12) 0;
 }
-.spNav__item > a::before {
+.nav__item > a::before {
     content: "";
     display: inline-block;
     width: rem(18);
@@ -46,10 +51,14 @@
     left: rem(-22);
 }
 
-.spNav__categoryList {
+.nav__item span {
+    display: inline-block;
+}
+
+.nav__categoryList {
 
 }
 
-.spNav__categoryItem {
+.nav__categoryItem {
     font-weight: $normal;
 }

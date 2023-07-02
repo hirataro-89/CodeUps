@@ -34,7 +34,7 @@
 
 }
 
-.header__spNav {
+.header__nav {
     margin-top: rem(24);
     height: 100vh;
     transition: 0.4s;
@@ -99,7 +99,7 @@
     transform: translateX(-3px) translateY(-11px) rotate(-36.8698deg);
 }
 
-.header__spNav.is-open {
+.header__nav.is-open {
     opacity: 1;
     visibility: inherit;
     display: block;
