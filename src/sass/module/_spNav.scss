@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.spNav {
+    color: $white;
+    line-height: calc(18 / 16);
+}
+
+.spNav__wrapper {
+    display: flex;
+    gap: rem(7);
+}
+
+.spNav__block {
+    width: 50%;
+}
+
+.spNav__list {
+
+}
+
+.spNav__item {
+    font-weight: $bold;
+    position: relative;
+    margin-left: rem(22);
+}
+
+.spNav__item + .spNav__item {
+    margin-top: rem(28);
+}
+
+.spNav__item a {
+    display: block;
+    padding: rem(12) 0;
+}
+.spNav__item > a::before {
+    content: "";
+    display: inline-block;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/menu-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: rem(-22);
+}
+
+.spNav__categoryList {
+
+}
+
+.spNav__categoryItem {
+    font-weight: $normal;
+}

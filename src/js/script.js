@@ -1,7 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-
 });
 
 /* swiper mainView */
@@ -36,3 +35,26 @@ const campaignSwiper = new Swiper('.campaignSwiper__slide', {
         }
     }
 });
+
+
+  /* ドロワーメニュー */
+const drawer = document.querySelector('.js-drawer')
+const spMenu = document.querySelectorAll(
+    '.js-drawer, .js-header, .js-nav'
+)
+
+drawer.addEventListener('click', function (e) {
+    e.stopPropagation()
+    spMenu.forEach(element => {
+        element.classList.toggle('is-open')
+    })
+})
+  /* 領域外をクリックすると閉じる */
+document.addEventListener('click', function (e) {
+    if (!drawer.contains(e.target)) {
+            spMenu.forEach(element => {
+            element.classList.remove('is-open')
+        })
+    }
+})
+

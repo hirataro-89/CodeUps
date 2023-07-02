@@ -1,0 +1,41 @@
+@use "global" as *;
+
+
+.pcNav {
+    color: $white;
+}
+
+.pcNav__list {
+    display: flex;
+}
+
+.pcNav__item {
+    text-align: center;
+    font-family: $second-font-family;
+}
+
+.pcNav__item:not(:first-child) {
+    padding-left: clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
+    // font-size: clamp(0.3125rem, -0.8237rem + 2.3041vw, 1.25rem);
+}
+
+.pcNav__item:not(:last-child) {
+    padding-right: clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
+}
+
+
+.pcNav__item::first-letter {
+    text-transform: capitalize;
+
+}
+
+.pcNav__item a {
+    font-size: rem(18);
+
+}
+
+.pcNav__subItem {
+    display: block;
+    font-size: rem(10);
+}
+

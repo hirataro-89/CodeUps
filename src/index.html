@@ -37,7 +37,86 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-    <header></header>
+    <header class="header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo"><a href="/"><img src="/assets/images/common/logo.svg" alt="ロゴ画像"></a></h1>
+        <nav class="header__pcNav pcNav u-desktop">
+          <ul class="pcNav__list">
+            <li class="pcNav__item"><a href="#">campaign<span class="pcNav__subItem">キャンペーン</span></a></li>
+            <li class="pcNav__item"><a href="#">about&nbsp;us<span class="pcNav__subItem">私たちについて</span></a></li>
+            <li class="pcNav__item"><a href="#">information<span class="pcNav__subItem">ダイビング情報</span></a></li>
+            <li class="pcNav__item"><a href="#">blog<span class="pcNav__subItem">ブログ</span></a></li>
+            <li class="pcNav__item"><a href="#">voice<span class="pcNav__subItem">お客様の声</span></a></li>
+            <li class="pcNav__item"><a href="#">price<span class="pcNav__subItem">料金一覧</span></a></li>
+            <li class="pcNav__item"><a href="#">FAQ<span class="pcNav__subItem">よくある質問</span></a></li>
+            <li class="pcNav__item"><a href="#">contact<span class="pcNav__subItem">お問い合わせ</span></a></li>
+          </ul>
+        </nav>
+        <nav class="header__spNav spNav u-mobile js-nav">
+          <div class="spNav__wrapper">
+            <div class="spNav__block">
+              <ul class="spNav__list">
+                <li class="spNav__item">
+                  <a href="#">キャンペーン</a>
+                  <ul class="spNav__categoryList">
+                    <li class="spNav__categoryItem"><a href="#">ライセンス取得</a></li>
+                    <li class="spNav__categoryItem"><a href="#">貸切体験ダイビング</a></li>
+                    <li class="spNav__categoryItem"><a href="#">ナイトダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">私たちについて</a>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">ダイビング情報</a>
+                  <ul class="spNav__categoryList">
+                    <li class="spNav__categoryItem"><a href="#">ライセンス講習</a></li>
+                    <li class="spNav__categoryItem"><a href="#">体験ダイビング</a></li>
+                    <li class="spNav__categoryItem"><a href="#">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">ブログ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="spNav__block">
+              <ul class="spNav__list">
+                <li class="spNav__item">
+                  <a href="#">お客様の声</a>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">料金一覧</a>
+                  <ul class="spNav__categoryList">
+                    <li class="spNav__categoryItem"><a href="#">ライセンス講習</a></li>
+                    <li class="spNav__categoryItem"><a href="#">体験ダイビング</a></li>
+                    <li class="spNav__categoryItem"><a href="#">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">よくある質問</a>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">プライバシー<br>ポリシー</a>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">利用規約</a>
+                </li>
+                <li class="spNav__item">
+                  <a href="#">お問い合わせ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+				<!-- ハンバーガーメニュー -->
+        <div class="header__drawer js-drawer u-mobile" aria-label="メニュー">
+          <span class="js-line"></span>
+          <span class="js-line"></span>
+          <span class="js-line"></span>
+        </div>
+      </div>
+    </header>
     <main class="top-main">
       <div class="top-mainView">
         <h1 class="top-mainView__title">
