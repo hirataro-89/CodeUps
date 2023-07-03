@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(){
         effect: 'fade',
         speed: 900
     });
-    
+
     /* swiper campaig */
     const campaignSwiper = new Swiper('.campaignSwiper__slide', {
         loop: true,
@@ -41,14 +41,13 @@ document.addEventListener('DOMContentLoaded',function(){
             }
         }
     });
-    
-    
+
       /* ドロワーメニュー */
     const drawer = document.querySelector('.js-drawer')
     const spMenu = document.querySelectorAll(
         '.js-drawer, .js-header, .js-nav'
     )
-    
+
     drawer.addEventListener('click', function (e) {
         e.stopPropagation()
         spMenu.forEach(element => {
@@ -63,16 +62,28 @@ document.addEventListener('DOMContentLoaded',function(){
             })
         }
     })
-    
+
     // /* toTop */
     let toTop = document.querySelector('.js-toTop');
     let trigger = document.querySelector('.js-toTopTrigger');
     let footer = document.querySelector('.js-footer');
-    
-    console.log(footer);
+
     /* triggerに到達したらtoTopのボタンを表示 */
     gsap.fromTo(toTop, {autoAlpha: 0}, {duration: 0.2, autoAlpha:1, scrollTrigger: {
         trigger: trigger,
         toggleActions: 'play none none reverse',
     }})
+
+    /* slideImage animation */
+    gsap.utils.toArray('.js-slideImage').forEach((slideImage) => {
+        let image = slideImage.querySelectorAll('img');
+        let Tl = gsap.timeline({scrollTrigger: {
+            trigger: slideImage,
+            start: 'top 90%',
+        }});
+        Tl
+        .fromTo(slideImage, {autoAlpha: 0, '--toLeft': '100%'}, {autoAlpha: 1, '--toLeft': '0%'})
+        .to(image, {clipPath: 'inset(0 0 0 0%)'}, '<')
+        .to(slideImage, {'--toRight': '100%'})
+    })
 })

@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.slideImage {
+    position: relative;
+    --toRight: 0%;
+    --toLeft: 100%;
+}
+
+.slideImage::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+    clip-path: inset(0 var(--toRight) 0  var(--toLeft));
+}
+
+.slideImage img {
+    clip-path: inset(0 0 0 100%);
+}
