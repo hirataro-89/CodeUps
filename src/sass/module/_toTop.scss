@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.toTop {
-    // position: sticky;
-    // bottom: rem(20);
-}
 
 .toTop a {
     display: block;
@@ -11,14 +7,18 @@
     background-color: $white;
     margin-right: rem(20);
     margin-left: auto;
-    width: rem(80);
-    height: rem(80);
+    width: rem(48);
+    height: rem(48);
     border-radius: 50%;
     border: 1px solid $accent-color;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s;
+    @include mq(md) {
+        width: rem(80);
+        height: rem(80);
+    }
 }
 
 .toTop a:hover {
@@ -30,9 +30,12 @@
 .toTop span {
     display: inline-block;
     width: rem(1);
-    height: rem(40);
+    height: rem(28);
     border-left: 1px solid $accent-color;
     position: relative;
+    @include mq(md) {
+        height: rem(40);
+    }
 }
 
 .toTop span::before {
