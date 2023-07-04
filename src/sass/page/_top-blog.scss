@@ -1,20 +1,24 @@
 @use "global" as *;
 
-.top-blog {
+.top-blog--layout {
+    padding-top: rem(80);
+    @include mq(md) {
+        padding-top: 0;
+    }
+}
+
+.top-blog__bg {
     @include mq(md) {
         background-image: url(../images/common/blog-bg.jpg);
         background-size: 100% 60.2%;
         background-position: top;
         background-repeat: no-repeat;
+        padding-top: rem(100);
     }
 }
 
 .top-blog__inner {
-    padding-top: rem(80);
-    @include mq(md) {
-        padding-top: rem(100);
-        position: relative;
-    }
+    position: relative;
 }
 
 .top-blog__inner::before {
@@ -29,7 +33,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        top: 24px;
+        top: -75px;
         right: clamp(rem(525), 24.098rem + 32.74vw, rem(745));
     }
 }
@@ -52,4 +56,3 @@
         margin-top: rem(80);
     }
 }
-

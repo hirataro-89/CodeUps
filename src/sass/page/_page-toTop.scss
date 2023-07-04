@@ -3,8 +3,11 @@
 .page-toTop {
     position: sticky;
     bottom: rem(20);
-    margin-top: rem(36);
+}
+
+.page-toTop--layout {
+    padding-top: rem(36);
     @include mq(md) {
-        margin-top: rem(40);
+        padding-top: rem(40);
     }
 }
