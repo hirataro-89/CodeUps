@@ -2,7 +2,7 @@
 
 .top-campaign {
     /* 横スクロール防止 */
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .top-campaign--layout {
@@ -24,7 +24,6 @@
 .top-campaign__swiper {
     margin-top: rem(24);
     margin-right: calc(50% - 50vw);
-
     @include mq(md) {
         margin-top: rem(40);
     }
