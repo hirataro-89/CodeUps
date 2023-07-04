@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.opening {
+    height: 100vh;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+}
+
+.opening__title {
+    text-align: center;
+    color: $accent-color;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.opening__mainTitle {
+    display: block;
+    font-family: $title-font-family;
+    text-transform: uppercase;
+    font-weight: $normal;
+    letter-spacing: 0.52em;
+    font-size: rem(40);
+    @include mq(md) {
+        font-size: rem(80);
+    }
+}
+
+.opening__subTitle {
+    font-family: $second-font-family;
+    font-weight: $normal;
+    font-size: rem(20);
+}
+
+.opening__body {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.opening__image {
+    width: 50%;
+}
+
+.opening__image img {
+    height: 100%;
+}
+
+/* ===============================================
+# animationの下準備
+=============================================== */
+.opening__image:first-child {
+    transform: translateY(100%);
+}
+
+.opening__image:last-child {
+    transform: translateY(calc(100% + 80px));
+}

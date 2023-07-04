@@ -41,7 +41,7 @@
   <body>
     <header class="header js-header">
       <div class="header__inner">
-        <h1 class="header__logo"><a href="/"><img src="/assets/images/common/logo.svg" alt="ロゴ画像"></a></h1>
+        <div class="header__logo"><a href="/"><img src="/assets/images/common/logo.svg" alt="ロゴ画像"></a></div>
         <nav class="header__pcNav pcNav u-desktop">
           <ul class="pcNav__list">
             <li class="pcNav__item"><a href="#">campaign<span class="pcNav__subItem">キャンペーン</span></a></li>
@@ -124,6 +124,22 @@
       </div>
     </header>
     <main class="top-main">
+      <div class="opening js-opening">
+        <div class="opening__title js-openingTitle">
+          <span class="opening__mainTitle">diving</span>
+          <span class="opening__subTitle">into the ocean</span>
+        </div>
+        <div class="opening__body">
+          <picture class="opening__image js-openingImage">
+              <source srcset="/assets/images/common/opening-left.webp" type="image/webp">
+              <img width="720" height="768" loading="lazy" src="/assets/images/common/opening-left.jpg" alt="オープニング画像1">
+          </picture>
+          <picture class="opening__image js-openingImage">
+              <source srcset="/assets/images/common/opening-right.webp" type="image/webp">
+              <img width="720" height="768" loading="lazy" src="/assets/images/common/opening-right.jpg" alt="オープニング画像2">
+          </picture>
+        </div>
+      </div>
       <div class="top-mainView">
         <h1 class="top-mainView__title">
           <span class="top-mainView__mainTitle">diving</span>

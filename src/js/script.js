@@ -4,11 +4,35 @@ document.addEventListener('DOMContentLoaded',function(){
 
     });
 
+
+    /* opening animation */
+    gsap.utils.toArray('.js-openingImage').forEach((openingImage) => {
+        const openingTl = gsap.timeline();
+        const openingBody = document.querySelector('.js-opening');
+        const openingTitle = document.querySelector('.js-openingTitle');
+        // スクロールを無効化
+        const handle = (event) => {
+            event.preventDefault();
+        }
+        openingTl
+        .add(function() {
+            document.addEventListener('touchmove', handle, { passive: false });
+            document.addEventListener('mousewheel', handle, { passive: false });
+        })
+        .fromTo(openingTitle, {autoAlpha: 0, scale: 0.9, y: 30}, {autoAlpha: 1, scale: 1, y: 0, duration: 1})
+        .to(openingImage, {y: '0%', duration: 4, delay: 0.5, ease: Power1.easeOut}, '-=0.3')
+        .to(openingBody, {scale: 1.2, autoAlpha: 0, duration: 1}, '+=0.3')
+        .add(function() {
+            document.removeEventListener('touchmove', handle, { passive: false });
+            document.removeEventListener('mousewheel', handle, { passive: false });
+        }, '-=0.8')
+    })
+
     /* swiper mainView */
     const mainviewSwiper = new Swiper('.mainViewSwiper', {
         loop: true,
         autoplay: {
-            delay: 4000,
+            delay: 8000,
         },
         effect: 'fade',
         speed: 900
