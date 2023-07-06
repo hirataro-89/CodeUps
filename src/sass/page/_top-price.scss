@@ -61,6 +61,7 @@
 
 .top-price__image {
     aspect-ratio: 345 / 227;
+    max-width: 100%;
     @include mq(md) {
         aspect-ratio: 492 / 746;
         margin-left: rem(93);

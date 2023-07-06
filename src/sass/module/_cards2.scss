@@ -8,3 +8,10 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.cards2__item {
+    @include mq(md) {
+        max-width: rem(333);
+        width: 100%;
+    }
+}
