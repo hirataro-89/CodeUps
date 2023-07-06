@@ -6,5 +6,8 @@
     font-size: rem(12);
     border: 1px solid $accent-color;
     line-height: calc(22 / 12);
-    padding: rem(5) rem(12);
+    padding: rem(4) rem(12);
+    @include mq(md) {
+        padding: rem(6) rem(16);
+    }
 }

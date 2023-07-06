@@ -5,7 +5,6 @@
     display: block;
     color: $accent-color;
     background-color: $white;
-    margin-right: rem(20);
     margin-left: auto;
     width: rem(48);
     height: rem(48);
@@ -14,8 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: rem(15);
     transition: 0.4s;
     @include mq(md) {
+        margin-right: rem(20);
         width: rem(80);
         height: rem(80);
     }

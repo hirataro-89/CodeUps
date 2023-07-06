@@ -24,6 +24,9 @@
     aspect-ratio: 102 / 38;
     max-width: rem(102);
     width: 100%;
+    @include mq(md) {
+        max-width: rem(133);
+    }
 }
 
 .header__logo img {

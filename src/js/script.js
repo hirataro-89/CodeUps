@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded',function(){
             document.addEventListener('mousewheel', handle, { passive: false });
         })
         .fromTo(openingTitle, {autoAlpha: 0, scale: 0.9, y: 30}, {autoAlpha: 1, scale: 1, y: 0, duration: 1})
-        .to(openingImage, {y: '0%', duration: 4, delay: 0.5, ease: Power1.easeOut}, '-=0.3')
-        .to(openingBody, {scale: 1.2, autoAlpha: 0, duration: 1}, '+=0.3')
+        .to(openingImage, {y: '0%', duration: 2.5, ease: Power3.easeInOut}, '-=0.3')
+        .to(openingBody, {scale: 1.2, autoAlpha: 0, duration: 1}, '+=0.5')
         .add(function() {
             document.removeEventListener('touchmove', handle, { passive: false });
             document.removeEventListener('mousewheel', handle, { passive: false });

@@ -2,12 +2,15 @@
 
 .page-toTop {
     position: sticky;
-    bottom: rem(20);
+    bottom: rem(15);
+    @include mq(md) {
+        bottom: rem(20);
+    }
 }
 
 .page-toTop--layout {
     padding-top: rem(36);
     @include mq(md) {
-        padding-top: rem(40);
+        padding-top: rem(60);
     }
 }

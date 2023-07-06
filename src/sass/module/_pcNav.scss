@@ -13,7 +13,6 @@
     text-align: center;
     font-family: $second-font-family;
     position: relative;
-    transition: 0.4s;
 }
 
 .pcNav__item:not(:first-child) {
@@ -24,20 +23,19 @@
     padding-right: clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
 }
 
-
-.pcNav__item::first-letter {
-    text-transform: capitalize;
-
-}
-
-.pcNav__item:hover {
-    transform: scale(1.05);
-    transition: 0.4s;
-}
-
 .pcNav__item a {
     font-size: rem(18);
     display: inline-block;
+    transition: 0.4s;
+}
+
+.pcNav__item a::first-letter {
+    text-transform: capitalize;
+}
+
+.pcNav__item a:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 
 .pcNav__subItem {

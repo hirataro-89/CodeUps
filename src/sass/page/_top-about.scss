@@ -61,27 +61,21 @@
         margin-top: 0;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        right: rem(41);
+        transform: translateY(-50%);
         z-index: 5;
         display: flex;
-        // align-items: center;
         max-width: rem(840);
         width: 100%;
+        gap: rem(40);
     }
 }
 
 .top-about__content {
+    margin-top: rem(16);
     @include mq(md) {
         max-width: rem(400);
         width: 100%;
-        margin-left: rem(40);
-    }
-}
-
-.top-about__text {
-    margin-top: rem(16);
-    @include mq(md) {
         margin-top: 0;
         color: $white;
     }
@@ -111,6 +105,6 @@
 .top-about__image--large {
     aspect-ratio: 281 / 186;
     width: calc(281 / 345) * 100%;
-    margin-top: -50%;
+    margin-top: -49%;
     margin-left: auto;
 }

@@ -23,7 +23,7 @@
     background-size: contain;
     position: absolute;
     top: rem(-26);
-    right: 0;
+    right: rem(15);
     @include mq(md) {
         top: rem(-40);
         right: inherit;
