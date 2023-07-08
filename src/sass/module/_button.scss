@@ -12,6 +12,8 @@
     transition: all 0.4s ease;
     border: 1px solid $accent-color;
     box-shadow: 4px 4px 0 -1px $white, 4px 4px 0 0 $accent-color;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .button::first-letter {
@@ -31,15 +33,34 @@
     transform: skew(45deg) translateY(-50%);
 }
 
+.button::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: 0.4s;
+    transform-origin: left top;
+}
+
 /* ===============================================
 # hover時の挙動
 =============================================== */
+
 .button:hover {
-    background-color: $white;
     color: $accent-color;
-    border: 1px solid $accent-color;
+}
+.button:hover::before {
+    transform: scaleX(1);
 }
 .button:hover::after {
     border-bottom: 1px solid $accent-color;
     border-right: 1px solid $accent-color;
+    transition: 0.4s;
 }
