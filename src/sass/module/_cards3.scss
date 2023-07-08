@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.cards3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(40);
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.cards3__item {
+    @include mq(md) {
+        max-width: rem(520);
+        width: 100%;
+    }
+}

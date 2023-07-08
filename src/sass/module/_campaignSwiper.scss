@@ -1,12 +1,9 @@
 @use "global" as *;
 
-.campaignSwiper {
-    overflow: hidden;
-}
-
 .campaignSwiper__wrapper {
     // box-shadow用
     padding-bottom: rem(10);
+    align-items: stretch;
 }
 
 .campaignSwiper__prev,
@@ -67,4 +64,8 @@
 .campaignSwiper__next::after {
     border-right: 1px solid $accent-color;
     transform: skew(45deg) translateY(-50%);
+}
+
+.campaignSwiper__slide {
+    height: auto;
 }

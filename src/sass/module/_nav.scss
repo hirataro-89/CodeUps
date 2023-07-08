@@ -34,7 +34,7 @@
 .nav__item {
     font-weight: $bold;
     position: relative;
-    margin-left: rem(22);
+    padding-left: rem(22);
 }
 
 .nav__item + .nav__item {
@@ -57,7 +57,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    left: rem(-22);
+    left: 0;
 }
 
 .nav__item a:hover {

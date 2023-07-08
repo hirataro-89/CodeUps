@@ -26,7 +26,27 @@ document.addEventListener('DOMContentLoaded',function(){
             document.removeEventListener('touchmove', handle, { passive: false });
             document.removeEventListener('mousewheel', handle, { passive: false });
         }, '-=0.8')
-    })
+    });
+
+    /* drower */
+    const drawer = document.querySelector('.js-drawer')
+    const spMenu = document.querySelectorAll(
+        '.js-drawer, .js-header, .js-nav'
+    );
+    drawer.addEventListener('click', function (e) {
+        e.stopPropagation()
+        spMenu.forEach(element => {
+            element.classList.toggle('is-open')
+        });
+    });
+    /* 領域外をクリックすると閉じる */
+    document.addEventListener('click', function (e) {
+        if (!drawer.contains(e.target)) {
+                spMenu.forEach(element => {
+                element.classList.remove('is-open')
+            });
+        };
+    });
 
     /* swiper mainView */
     const mainviewSwiper = new Swiper('.mainViewSwiper', {
@@ -39,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     /* swiper campaig */
-    const campaignSwiper = new Swiper('.campaignSwiper__slide', {
+    const campaignSwiper = new Swiper('.campaignSwiper__slider', {
         loop: true,
         freeMode: true,
         speed: 900,
@@ -66,27 +86,6 @@ document.addEventListener('DOMContentLoaded',function(){
         }
     });
 
-      /* ドロワーメニュー */
-    const drawer = document.querySelector('.js-drawer')
-    const spMenu = document.querySelectorAll(
-        '.js-drawer, .js-header, .js-nav'
-    )
-
-    drawer.addEventListener('click', function (e) {
-        e.stopPropagation()
-        spMenu.forEach(element => {
-            element.classList.toggle('is-open')
-        })
-    })
-      /* 領域外をクリックすると閉じる */
-    document.addEventListener('click', function (e) {
-        if (!drawer.contains(e.target)) {
-                spMenu.forEach(element => {
-                element.classList.remove('is-open')
-            })
-        }
-    })
-
     // /* toTop */
     let toTop = document.querySelector('.js-toTop');
     let trigger = document.querySelector('.js-toTopTrigger');
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.fromTo(toTop, {autoAlpha: 0}, {duration: 0.2, autoAlpha:1, scrollTrigger: {
         trigger: trigger,
         toggleActions: 'play none none reverse',
-    }})
+    }});
 
     /* slideImage animation */
     gsap.utils.toArray('.js-slideImage').forEach((slideImage) => {
@@ -109,5 +108,5 @@ document.addEventListener('DOMContentLoaded',function(){
         .fromTo(slideImage, {autoAlpha: 0, '--toLeft': '100%'}, {autoAlpha: 1, '--toLeft': '0%'})
         .to(image, {clipPath: 'inset(0 0 0 0%)'}, '<')
         .to(slideImage, {'--toRight': '100%'})
-    })
+    });
 })

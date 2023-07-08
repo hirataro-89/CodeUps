@@ -7,11 +7,6 @@
     }
 }
 
-.footer__inner {
-    /* 横スクロール防止 */
-    overflow: hidden;
-}
-
 .footer__bg {
     background-color: $accent-color;
     padding-top: rem(48);
@@ -74,12 +69,17 @@
     text-align: center;
     color: $white;
     font-family: $second-font-family;
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-    font-size: rem(12);
+    white-space: nowrap;
     margin-top: rem(30);
+    line-height: 1;
+    @include mq(md) {
+        margin-top: rem(68);
+    }
+}
+
+.footer__copy small {
+    font-size: rem(12);
     @include mq(md) {
         font-size: rem(14);
-        margin-top: rem(68);
     }
 }

@@ -54,8 +54,8 @@
             <li class="pcNav__item"><a href="#">contact<span class="pcNav__subItem">お問い合わせ</span></a></li>
           </ul>
         </nav>
-        <nav class="header__nav nav u-mobile js-nav">
-          <div class="nav__wrapper">
+        <nav class="header__spNav nav u-mobile js-nav">
+          <div class="nav__wrapper inner">
             <div class="nav__block">
               <ul class="nav__list">
                 <li class="nav__item">
@@ -124,7 +124,7 @@
       </div>
     </header>
     <main class="top-main">
-      <!-- <div class="opening js-opening">
+      <div class="opening js-opening">
         <div class="opening__title js-openingTitle">
           <span class="opening__mainTitle">diving</span>
           <span class="opening__subTitle">into the ocean</span>
@@ -139,7 +139,7 @@
               <img width="720" height="768" loading="lazy" src="./assets/images/common/opening-right.jpg" alt="オープニング画像2">
           </picture>
         </div>
-      </div> -->
+      </div>
       <div class="top-mainView">
         <h1 class="top-mainView__title">
           <span class="top-mainView__mainTitle">diving</span>
@@ -236,9 +236,9 @@
             <!-- 前後の矢印 -->
             <div class="campaignSwiper__prev swiper-button-prev"></div>
             <div class="campaignSwiper__next swiper-button-next"></div>
-            <div class="swiper campaignSwiper__slide">
+            <div class="swiper campaignSwiper__slider">
               <div class="campaignSwiper__wrapper swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide campaignSwiper__slide">
                   <a href="#" class="campaignSwiper__card card1">
                     <div class="card1__body">
                       <div class="card1__head">
@@ -265,7 +265,7 @@
                     </picture>
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide campaignSwiper__slide">
                   <a href="#" class="campaignSwiper__card card1">
                     <div class="card1__body">
                       <div class="card1__head">
@@ -292,7 +292,7 @@
                     </picture>
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide campaignSwiper__slide">
                   <a href="#" class="campaignSwiper__card card1">
                     <div class="card1__body">
                       <div class="card1__head">
@@ -319,7 +319,7 @@
                     </picture>
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide campaignSwiper__slide">
                   <a href="#" class="campaignSwiper__card card1">
                     <div class="card1__body">
                       <div class="card1__head">
@@ -459,7 +459,8 @@
                     </div>
                   </div>
                   <picture class="card2__image">
-                    <source srcset="./assets/images/common/blog1.webp" type="image/webp" />
+                    <source srcset="./assets/images/common/blog1.webp" type="image/webp" width="301"
+                    height="201"/>
                     <img
                       width="301"
                       height="201"
@@ -539,8 +540,8 @@
             <span class="sectionTitle__main">voice</span>
             <span class="sectionTitle__sub">お客様の声</span>
           </h2>
-          <div class="top-voice__cards">
-            <a href="#" class="top-voice__card card3">
+          <div class="top-voice__cards cards3">
+            <a href="#" class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -573,7 +574,7 @@
                 </div>
               </div>
             </a>
-            <a href="#" class="top-voice__card card3">
+            <a href="#" class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -842,7 +843,7 @@
               </div>
             </div>
           </nav>
-          <div class="footer__copy"><p>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</p></div>
+          <div class="footer__copy"><small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small></div>
         </div>
       </div>
     </footer>
