@@ -7,6 +7,13 @@
 
 .pcNav__list {
     display: flex;
+    align-items: center;
+}
+
+.pcNav__list,
+.pcNav__item,
+.pcNav__item a {
+    height: inherit;
 }
 
 .pcNav__item {
@@ -25,16 +32,33 @@
 
 .pcNav__item a {
     font-size: rem(18);
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     transition: 0.4s;
+    position: relative;
 }
 
 .pcNav__item a::first-letter {
     text-transform: capitalize;
 }
 
-.pcNav__item a:hover {
-    transform: scale(1.05);
+.pcNav__item a::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: rem(1);
+    background-color: $white;
+    position: absolute;
+    bottom: rem(20);
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+
+.pcNav__item a:hover::after {
+    transform: scaleX(1);
     transition: 0.4s;
 }
 
