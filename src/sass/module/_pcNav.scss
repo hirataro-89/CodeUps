@@ -22,20 +22,13 @@
     position: relative;
 }
 
-.pcNav__item:not(:first-child) {
-    padding-left: clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
-}
-
-.pcNav__item:not(:last-child) {
-    padding-right: clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
-}
-
 .pcNav__item a {
     font-size: rem(18);
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 0 clamp(rem(5), -0.8237rem + 2.3041vw, rem(20));
     transition: 0.4s;
     position: relative;
 }

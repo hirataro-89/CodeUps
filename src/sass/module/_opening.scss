@@ -2,12 +2,12 @@
 
 .opening {
     height: 100vh;
+    width: 100vw;
     z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: $white;
 }
 
 .opening__title {
@@ -19,6 +19,10 @@
     left: 52%;
     transform: translate(-50%, -50%);
     z-index: 5;
+    @include mq(md) {
+        top: 56%;
+        left: 51%;
+    }
 }
 
 .opening__mainTitle {
@@ -41,26 +45,16 @@
 
 .opening__body {
     display: flex;
-    height: 100%;
+    height: inherit;
     position: relative;
-    z-index: 50;
 }
 
-.opening__image {
+.opening__curtain {
+    background-color: $white;
     width: 50%;
+    height: inherit;
 }
 
-.opening__image img {
-    height: 100%;
-}
-
-/* ===============================================
-# animationの下準備
-=============================================== */
-.opening__image:first-child {
-    transform: translateY(100%);
-}
-
-.opening__image:last-child {
-    transform: translateY(calc(100% + 80px));
+.opening__curtain:last-child {
+    height: calc(100% + 80px);
 }

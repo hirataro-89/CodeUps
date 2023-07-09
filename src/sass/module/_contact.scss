@@ -80,10 +80,11 @@
     }
 }
 
-.contact__image {
+.contact__map {
     display: block;
     aspect-ratio: 295 / 160;
     margin-top: rem(16);
+    overflow: hidden;
     @include mq(md) {
         margin-top: 0;
         aspect-ratio: 273 / 148;
@@ -92,7 +93,7 @@
     }
 }
 
-.contact__image img {
+.contact__map img {
     object-fit: cover;
     height: 100%;
 }

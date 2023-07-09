@@ -6,22 +6,32 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
     /* opening animation */
-    gsap.utils.toArray('.js-openingImage').forEach((openingImage) => {
+    gsap.utils.toArray('.js-curtain').forEach((openingCurtain) => {
         const openingTl = gsap.timeline();
-        const openingBody = document.querySelector('.js-opening');
         const openingTitle = document.querySelector('.js-openingTitle');
+        const header = document.querySelector('.js-header');
+        const mainTitle = document.querySelector('.js-mainTitle');
+        const openingBody = document.querySelector('.js-opening');
+
         // スクロールを無効化
         const handle = (event) => {
             event.preventDefault();
         }
+        gsap.set(header, {y: '-100%'})
+        gsap.set(mainTitle, {y: 30, autoAlpha: 0})
+
+
         openingTl
         .add(function() {
             document.addEventListener('touchmove', handle, { passive: false });
             document.addEventListener('mousewheel', handle, { passive: false });
         })
-        .fromTo(openingTitle, {autoAlpha: 0, scale: 0.9, y: 30}, {autoAlpha: 1, scale: 1, y: 0, duration: 1})
-        .to(openingImage, {y: '0%', duration: 2.5, ease: Power3.easeInOut}, '-=0.3')
-        .to(openingBody, {scale: 1.2, autoAlpha: 0, duration: 1}, '+=0.5')
+        .fromTo(openingTitle, {autoAlpha: 0, y: 30}, {autoAlpha: 1, y: 0})
+        .to(openingTitle, {autoAlpha: 0, duration:1})
+        .to(openingCurtain, {y: '-100%', duration: 2.5, ease: Power3.easeInOut}, '-=0.5')
+        .to(openingBody, {autoAlpha: 0})
+        .to(header, {y: '0%', ease: Power2.easeIn},'-=1')
+        .to(mainTitle, {autoAlpha: 1, y: 0}, '<')
         .add(function() {
             document.removeEventListener('touchmove', handle, { passive: false });
             document.removeEventListener('mousewheel', handle, { passive: false });
@@ -33,11 +43,13 @@ document.addEventListener('DOMContentLoaded',function(){
     const spMenu = document.querySelectorAll(
         '.js-drawer, .js-header, .js-nav'
     );
+    const body =document.querySelector('body');
     drawer.addEventListener('click', function (e) {
         e.stopPropagation()
         spMenu.forEach(element => {
             element.classList.toggle('is-open')
         });
+        body.classList.toggle('is-open');
     });
     /* 領域外をクリックすると閉じる */
     document.addEventListener('click', function (e) {

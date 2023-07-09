@@ -9,8 +9,8 @@
 }
 
 .page-toTop--layout {
-    padding-top: rem(36);
+    margin-top: rem(36);
     @include mq(md) {
-        padding-top: rem(60);
+        margin-top: rem(60);
     }
 }

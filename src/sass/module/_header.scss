@@ -21,7 +21,7 @@
     align-items: center;
     padding: 0 rem(15);
     @include mq(md) {
-        padding: 0 rem(40);
+        padding: 0 rem(20) 0 rem(40);
         gap: rem(20);
     }
 }
@@ -41,16 +41,17 @@
 }
 
 .header__spNav {
-    padding-top: rem(92);
     height: 100vh;
     transition: 0.4s;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 0;
+    top: rem(80);
     left: 0;
     right: 0;
     background-color: $accent-color;
+    overflow: scroll;
+    padding-bottom: rem(200);
 }
 
 .header__pcNav {
@@ -114,4 +115,10 @@
 .header__spNav.is-open {
     opacity: 1;
     visibility: inherit;
+}
+
+/* is-open時はスクロールさせない */
+body.is-open {
+    height: 100%;
+    overflow: hidden;
 }

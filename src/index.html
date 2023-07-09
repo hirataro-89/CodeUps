@@ -123,25 +123,19 @@
         </div>
       </div>
     </header>
-    <main class="top-main">
+    <main class="top-main js-main">
       <div class="opening js-opening">
         <div class="opening__title js-openingTitle">
           <span class="opening__mainTitle">diving</span>
           <span class="opening__subTitle">into the ocean</span>
         </div>
         <div class="opening__body">
-          <picture class="opening__image js-openingImage">
-              <source srcset="./assets/images/common/opening-left.webp" type="image/webp">
-              <img width="720" height="768" loading="lazy" src="./assets/images/common/opening-left.jpg" alt="オープニング画像1">
-          </picture>
-          <picture class="opening__image js-openingImage">
-              <source srcset="./assets/images/common/opening-right.webp" type="image/webp">
-              <img width="720" height="768" loading="lazy" src="./assets/images/common/opening-right.jpg" alt="オープニング画像2">
-          </picture>
+          <div class="opening__curtain js-curtain"></div>
+          <div class="opening__curtain js-curtain"></div>
         </div>
       </div>
       <div class="top-mainView">
-        <h1 class="top-mainView__title">
+        <h1 class="top-mainView__title js-mainTitle">
           <span class="top-mainView__mainTitle">diving</span>
           <span class="top-mainView__subTitle">into the ocean</span>
         </h1>
@@ -349,7 +343,7 @@
               </div>
             </div>
           </div>
-          <div class="top-campaign__button buttonBlock"><a href="#" class="button buttonBlock__button">view more</a></div>
+          <div class="top-campaign__button"><a href="#" class="button">view more</a></div>
         </div>
       </section>
       <section class="top-about top-about--layout js-toTopTrigger">
@@ -368,8 +362,8 @@
                 <p class="top-about__text">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </p>
-                <div class="top-about__button buttonBlock">
-                  <a href="#" class="buttonBlock__button button">view more</a>
+                <div class="top-about__button">
+                  <a href="#" class="button">view more</a>
                 </div>
               </div>
             </div>
@@ -417,7 +411,7 @@
                       正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
                     </p>
                   </div>
-                  <div class="media__button buttonBlock"><a href="#" class="buttonBlock__button button">view more</a></div>
+                  <div class="media__button"><a href="#" class="button">view more</a></div>
                 </div>
                 <picture class="media__image slideImage js-slideImage">
                   <source srcset="./assets/images/common/information.webp" type="image/webp" />
@@ -528,8 +522,8 @@
                 </div>
               </a>
             </div>
-            <div class="top-blog__button buttonBlock">
-              <a href="#" class="buttonBlock__button button">view more</a>
+            <div class="top-blog__button">
+              <a href="#" class="button">view more</a>
             </div>
           </div>
         </div>
@@ -608,8 +602,8 @@
               </div>
             </a>
           </div>
-          <div class="top-voice__button buttonBlock">
-            <a href="#" class="buttonBlock__button button">view more</a>
+          <div class="top-voice__button">
+            <a href="#" class="button">view more</a>
           </div>
         </div>
       </section>
@@ -715,8 +709,8 @@
                 />
               </picture>
             </div>
-            <div class="top-price__button buttonBlock">
-              <a href="#" class="buttonBlock__button button">view more</a>
+            <div class="top-price__button">
+              <a href="#" class="button">view more</a>
             </div>
           </div>
         </div>
@@ -741,16 +735,9 @@
                     営業時間:8:30-19:00<br />
                     定休日:毎週火曜日
                   </address>
-                  <picture class="contact__image">
-                    <source srcset="./assets/images/common/contact.webp" type="image/webp" />
-                    <img
-                      width="295"
-                      height="160"
-                      loading="lazy"
-                      src="./assets/images/common/contact.png"
-                      alt="問い合わせ画像"
-                    />
-                  </picture>
+                  <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.5666708432823!2d127.87582441504016!3d26.694337983222116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e4fa3152619e3d%3A0xea08a6700fdd9ffe!2z5rKW57iE576O44KJ5rW35rC05peP6aSo!5e0!3m2!1sja!2sjp!4v1688937878244!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
                 </div>
               </div>
               <div class="contact__body">
@@ -759,7 +746,7 @@
                   <span class="sectionTitle__sub">お問い合わせ</span>
                 </h2>
                 <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-                <div class="contact__button buttonBlock"><a href="#" class="buttonBlock__button button">view more</a></div>
+                <div class="contact__button"><a href="#" class="button">view more</a></div>
               </div>
 
             </div>
