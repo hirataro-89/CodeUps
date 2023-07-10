@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded',function(){
         .to(header, {y: '0%', ease: Power2.easeIn},'-=1')
         .to(mainTitle, {autoAlpha: 1, y: 0}, '<')
         .add(function() {
-            document.removeEventListener('touchmove', handle, { passive: false });
-            document.removeEventListener('mousewheel', handle, { passive: false });
-        }, '-=0.8')
+            document.removeEventListener('touchmove', handle, { passive: true });
+            document.removeEventListener('mousewheel', handle, { passive: true });
+        }, '<')
     });
 
     /* drower */
