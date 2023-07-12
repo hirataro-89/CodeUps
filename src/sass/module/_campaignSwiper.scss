@@ -10,7 +10,7 @@
 .campaignSwiper__next {
     display: none;
     @include mq(md) {
-        top: 0;
+        top: rem(2);
         margin-top: 0;
         color: $accent-color;
         background-color: $white;
@@ -21,6 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1;
     }
 }
 

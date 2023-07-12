@@ -1,48 +1,48 @@
 @use "global" as *;
 
-.top-mainView {
+.mainView {
     height: 100vh;
     position: relative;
 }
 
-.top-mainView__title {
+.mainView__title {
     text-align: center;
     color: $white;
     line-height: 1;
     position: absolute;
     top: 50%;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
     @include mq(md) {
         top: 56%;
-        left: 51%;
     }
 }
 
-.top-mainView__mainTitle {
+.mainView__mainTitle {
     display: block;
     font-family: $title-font-family;
     text-transform: uppercase;
     font-weight: $normal;
     letter-spacing: 0.52em;
+    text-indent: 0.52em;
     font-size: rem(40);
     @include mq(md) {
         font-size: rem(80);
     }
 }
 
-.top-mainView__subTitle {
+.mainView__subTitle {
     font-family: $second-font-family;
     font-weight: $normal;
     font-size: rem(20);
 }
 
-.top-mainView__swiper {
+.mainView__swiper {
     height: 100%;
 }
 
-.top-mainView__image img {
+.mainView__image img {
     height: 100%;
     object-fit: cover;
 }

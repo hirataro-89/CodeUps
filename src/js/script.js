@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded',function(){
     // /* toTop */
     let toTop = document.querySelector('.js-toTop');
     let trigger = document.querySelector('.js-toTopTrigger');
-    let footer = document.querySelector('.js-footer');
 
     /* triggerに到達したらtoTopのボタンを表示 */
     gsap.fromTo(toTop, {autoAlpha: 0}, {duration: 0.2, autoAlpha:1, scrollTrigger: {

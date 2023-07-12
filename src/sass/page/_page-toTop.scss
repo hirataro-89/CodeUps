@@ -3,6 +3,7 @@
 .page-toTop {
     position: sticky;
     bottom: rem(15);
+    z-index: 5;
     @include mq(md) {
         bottom: rem(20);
     }
