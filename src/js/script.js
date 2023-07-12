@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded',function(){
     const mainviewSwiper = new Swiper('.mainViewSwiper', {
         loop: true,
         autoplay: {
-            delay: 8000,
+            delay: 7000,
         },
         effect: 'fade',
         speed: 900

@@ -1,17 +1,17 @@
 @use "global" as *;
 
-.top-about--layout {
+.about--topLayout {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: rem(140);
     }
 }
 
-.top-about__inner {
+.about__inner {
     position: relative;
 }
 
-.top-about__inner::before {
+.about__inner::before {
     @include mq(md) {
         content: "";
         display: block;
@@ -28,11 +28,12 @@
         left: clamp(rem(625), 14.42rem + 57.59vw, rem(1012));
     }
 }
-.top-about__title {
+
+.about__title {
     text-align: center;
 }
 
-.top-about__subtitle {
+.about__subtitle {
     font-size: rem(40);
     color: $accent-color;
     line-height: 1;
@@ -45,7 +46,7 @@
     }
 }
 
-.top-about__box {
+.about__box {
     display: flex;
     flex-direction: column-reverse;
     margin-top: rem(24);
@@ -55,7 +56,7 @@
     }
 }
 
-.top-about__body {
+.about__body {
     margin-top: rem(40);
     @include mq(md) {
         margin-top: 0;
@@ -71,7 +72,7 @@
     }
 }
 
-.top-about__content {
+.about__content {
     margin-top: rem(16);
     @include mq(md) {
         max-width: rem(400);
@@ -81,28 +82,28 @@
     }
 }
 
-.top-about__button {
+.about__button {
     text-align: center;
     margin-top: rem(40);
 }
 
-.top-about__image {
+.about__image {
     display: block;
 }
 
-.top-about__image img {
+.about__image img {
     object-fit: cover;
     height: 100%;
 }
 
-.top-about__image--small {
+.about__image--small {
     aspect-ratio: 128 / 194;
     width: calc(128 / 345) * 100%;
     position: relative;
     z-index: 1;
 }
 
-.top-about__image--large {
+.about__image--large {
     aspect-ratio: 281 / 186;
     width: calc(281 / 345) * 100%;
     margin-top: -49%;

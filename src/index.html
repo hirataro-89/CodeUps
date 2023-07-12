@@ -163,7 +163,7 @@
         </div>
       </div>
     </header>
-    <main class="top-main js-main">
+    <main class="main js-main">
       <div class="opening js-opening">
         <div class="opening__title js-openingTitle">
           <span class="opening__mainTitle">diving</span>
@@ -181,92 +181,100 @@
         </h1>
         <div class="mainView__swiper swiper mainViewSwiper">
           <div class="swiper-wrapper">
-            <picture class="mainView__image swiper-slide">
-              <source
-                media="(max-width: 767px)"
-                srcset="./assets/images/common/mv-sp1.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="./assets/images/common/mv-pc1.webp"
-                type="image/webp"
-              />
-              <img
-                width="375"
-                height="667"
-                loading="lazy"
-                src="./assets/images/common/mv-sp1.jpg"
-                alt="mvの画像1"
-              />
-            </picture>
-            <picture class="mainView__image swiper-slide">
-              <source
-                media="(max-width: 767px)"
-                srcset="./assets/images/common/mv-sp2.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="./assets/images/common/mv-pc2.webp"
-                type="image/webp"
-              />
-              <img
-                width="375"
-                height="667"
-                loading="lazy"
-                src="./assets/images/common/mv-sp2.jpg"
-                alt="mvの画像2"
-              />
-            </picture>
-            <picture class="mainView__image swiper-slide">
-              <source
-                media="(max-width: 767px)"
-                srcset="./assets/images/common/mv-sp3.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="./assets/images/common/mv-pc3.webp"
-                type="image/webp"
-              />
-              <img
-                width="375"
-                height="667"
-                loading="lazy"
-                src="./assets/images/common/mv-sp3.jpg"
-                alt="mvの画像3"
-              />
-            </picture>
-            <picture class="mainView__image swiper-slide">
-              <source
-                media="(max-width: 767px)"
-                srcset="./assets/images/common/mv-sp4.webp"
-                type="image/webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="./assets/images/common/mv-pc4.webp"
-                type="image/webp"
-              />
-              <img
-                width="375"
-                height="667"
-                loading="lazy"
-                src="./assets/images/common/mv-sp4.jpg"
-                alt="mvの画像4"
-              />
-            </picture>
+            <div class="mainView__image swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./assets/images/common/mv-sp1.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv-pc1.webp"
+                  type="image/webp"
+                />
+                <img
+                  width="375"
+                  height="667"
+                  loading="lazy"
+                  src="./assets/images/common/mv-sp1.jpg"
+                  alt="mvの画像1"
+                />
+              </picture>
+            </div>
+            <div class="mainView__image swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./assets/images/common/mv-sp2.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv-pc2.webp"
+                  type="image/webp"
+                />
+                <img
+                  width="375"
+                  height="667"
+                  loading="lazy"
+                  src="./assets/images/common/mv-sp2.jpg"
+                  alt="mvの画像2"
+                />
+              </picture>
+            </div>
+            <div class="mainView__image swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./assets/images/common/mv-sp3.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv-pc3.webp"
+                  type="image/webp"
+                />
+                <img
+                  width="375"
+                  height="667"
+                  loading="lazy"
+                  src="./assets/images/common/mv-sp3.jpg"
+                  alt="mvの画像3"
+                />
+              </picture>
+            </div>
+            <div class="mainView__image swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./assets/images/common/mv-sp4.webp"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv-pc4.webp"
+                  type="image/webp"
+                />
+                <img
+                  width="375"
+                  height="667"
+                  loading="lazy"
+                  src="./assets/images/common/mv-sp4.jpg"
+                  alt="mvの画像4"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
-      <section class="top-campaign top-campaign--layout">
-        <div class="top-campaign__inner inner">
-          <h2 class="top-campaign__title sectionTitle">
+      <section class="campaign campaign--topLayout">
+        <div class="campaign__inner inner">
+          <h2 class="campaign__title sectionTitle">
             <span class="sectionTitle__main">Campaign</span>
             <span class="sectionTitle__sub">キャンペーン</span>
           </h2>
-          <div class="top-campaign__swiper campaignSwiper">
+          <div class="campaign__swiper campaignSwiper">
             <!-- 前後の矢印 -->
             <div class="campaignSwiper__prev swiper-button-prev"></div>
             <div class="campaignSwiper__next swiper-button-next"></div>
@@ -287,16 +295,18 @@
                         </div>
                       </div>
                     </div>
-                    <picture class="card1__image">
-                      <source srcset="./assets/images/common/campaign1.webp" type="image/webp" />
-                      <img
-                        width="280"
-                        height="188"
-                        loading="lazy"
-                        src="./assets/images/common/campaign1.png"
-                        alt="キャンペーン画像1"
-                      />
-                    </picture>
+                    <div class="card1__image">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign1.webp" type="image/webp" />
+                        <img
+                          width="280"
+                          height="188"
+                          loading="lazy"
+                          src="./assets/images/common/campaign1.png"
+                          alt="キャンペーン画像1"
+                        />
+                      </picture>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide campaignSwiper__slide">
@@ -314,16 +324,18 @@
                         </div>
                       </div>
                     </div>
-                    <picture class="card1__image">
-                      <source srcset="./assets/images/common/campaign2.webp" type="image/webp" />
-                      <img
-                        width="280"
-                        height="188"
-                        loading="lazy"
-                        src="./assets/images/common/campaign2.png"
-                        alt="キャンペーン画像2"
-                      />
-                    </picture>
+                    <div class="card1__image">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign2.webp" type="image/webp" />
+                        <img
+                          width="280"
+                          height="188"
+                          loading="lazy"
+                          src="./assets/images/common/campaign2.png"
+                          alt="キャンペーン画像2"
+                        />
+                      </picture>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide campaignSwiper__slide">
@@ -341,16 +353,18 @@
                         </div>
                       </div>
                     </div>
-                    <picture class="card1__image">
-                      <source srcset="./assets/images/common/campaign3.webp" type="image/webp" />
-                      <img
-                        width="280"
-                        height="188"
-                        loading="lazy"
-                        src="./assets/images/common/campaign3.png"
-                        alt="キャンペーン画像3"
-                      />
-                    </picture>
+                    <div class="card1__image">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign3.webp" type="image/webp" />
+                        <img
+                          width="280"
+                          height="188"
+                          loading="lazy"
+                          src="./assets/images/common/campaign3.png"
+                          alt="キャンペーン画像3"
+                        />
+                      </picture>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide campaignSwiper__slide">
@@ -368,66 +382,72 @@
                         </div>
                       </div>
                     </div>
-                    <picture class="card1__image">
-                      <source srcset="./assets/images/common/campaign4.webp" type="image/webp" />
-                      <img
-                        width="280"
-                        height="188"
-                        loading="lazy"
-                        src="./assets/images/common/campaign4.png"
-                        alt="キャンペーン画像4"
-                      />
-                    </picture>
+                    <div class="card1__image">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign4.webp" type="image/webp" />
+                        <img
+                          width="280"
+                          height="188"
+                          loading="lazy"
+                          src="./assets/images/common/campaign4.png"
+                          alt="キャンペーン画像4"
+                        />
+                      </picture>
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="top-campaign__button"><a href="#" class="button">view more</a></div>
+          <div class="campaign__button"><a href="#" class="button">view more</a></div>
         </div>
       </section>
-      <section class="top-about top-about--layout js-toTopTrigger">
-        <div class="top-about__inner inner">
-          <h2 class="top-about__title sectionTitle">
+      <section class="about about--topLayout js-toTopTrigger">
+        <div class="about__inner inner">
+          <h2 class="about__title sectionTitle">
             <span class="sectionTitle__main">about us</span>
             <span class="sectionTitle__sub">私たちについて</span>
           </h2>
-          <div class="top-about__box">
-            <div class="top-about__body">
-              <h3 class="top-about__subtitle">Dive into<br />the Ocean</h3>
-              <div class="top-about__content">
-                <p class="top-about__text">
+          <div class="about__box">
+            <div class="about__body">
+              <h3 class="about__subtitle">Dive into<br />the Ocean</h3>
+              <div class="about__content">
+                <p class="about__text">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 </p>
-                <p class="top-about__text">
+                <p class="about__text">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </p>
-                <div class="top-about__button">
+                <div class="about__button">
                   <a href="#" class="button">view more</a>
                 </div>
               </div>
             </div>
-            <div class="top-about__images">
-              <picture class="top-about__image top-about__image--small">
-                <source srcset="./assets/images/common/about-small.webp" type="image/webp" />
-                <img
-                  width="128"
-                  height="194"
-                  loading="lazy"
-                  src="./assets/images/common/about-small.jpg"
-                  alt="aboutの画像2"
-                />
-              </picture>
-              <picture class="top-about__image top-about__image--large">
-                <source srcset="./assets/images/common/about-large.webp" type="image/webp" />
-                <img
-                  width="281"
-                  height="186"
-                  loading="lazy"
-                  src="./assets/images/common/about-large.jpg"
-                  alt="aboutの画像1"
-                />
-              </picture>
+            <div class="about__images">
+              <div class="about__image about__image--small">
+                <picture>
+                  <source srcset="./assets/images/common/about-small.webp" type="image/webp" />
+                  <img
+                    width="128"
+                    height="194"
+                    loading="lazy"
+                    src="./assets/images/common/about-small.jpg"
+                    alt="aboutの画像2"
+                  />
+                </picture>
+              </div>
+              <div class="about__image about__image--large">
+                <picture>
+                  <source srcset="./assets/images/common/about-large.webp" type="image/webp" />
+                  <img
+                    width="281"
+                    height="186"
+                    loading="lazy"
+                    src="./assets/images/common/about-large.jpg"
+                    alt="aboutの画像1"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -453,16 +473,18 @@
                   </div>
                   <div class="media__button"><a href="#" class="button">view more</a></div>
                 </div>
-                <picture class="media__image slideImage js-slideImage">
-                  <source srcset="./assets/images/common/information.webp" type="image/webp" />
-                  <img
-                    width="345"
-                    height="227"
-                    loading="lazy"
-                    src="./assets/images/common/information.png"
-                    alt="ダイビング情報"
-                  />
-                </picture>
+                <div class="media__image slideImage js-slideImage">
+                  <picture>
+                    <source srcset="./assets/images/common/information.webp" type="image/webp" />
+                    <img
+                      width="345"
+                      height="227"
+                      loading="lazy"
+                      src="./assets/images/common/information.png"
+                      alt="ダイビング情報"
+                    />
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
@@ -492,17 +514,19 @@
                       </p>
                     </div>
                   </div>
-                  <picture class="card2__image">
-                    <source srcset="./assets/images/common/blog1.webp" type="image/webp" width="301"
-                    height="201"/>
-                    <img
-                      width="301"
-                      height="201"
-                      loading="lazy"
-                      src="./assets/images/common/blog1.png"
-                      alt="blogの画像1"
-                    />
-                  </picture>
+                  <div class="card2__image">
+                    <picture>
+                      <source srcset="./assets/images/common/blog1.webp" type="image/webp" width="301"
+                      height="201"/>
+                      <img
+                        width="301"
+                        height="201"
+                        loading="lazy"
+                        src="./assets/images/common/blog1.png"
+                        alt="blogの画像1"
+                      />
+                    </picture>
+                  </div>
                 </div>
               </a>
               <a href="#" class="cards2__item card2">
@@ -521,16 +545,18 @@
                       </p>
                     </div>
                   </div>
-                  <picture class="card2__image">
-                    <source srcset="./assets/images/common/blog2.webp" type="image/webp" />
-                    <img
-                      width="301"
-                      height="201"
-                      loading="lazy"
-                      src="./assets/images/common/blog2.png"
-                      alt="blogの画像2"
-                    />
-                  </picture>
+                  <div class="card2__image">
+                    <picture>
+                      <source srcset="./assets/images/common/blog2.webp" type="image/webp" />
+                      <img
+                        width="301"
+                        height="201"
+                        loading="lazy"
+                        src="./assets/images/common/blog2.png"
+                        alt="blogの画像2"
+                      />
+                    </picture>
+                  </div>
                 </div>
               </a>
               <a href="#" class="cards2__item card2">
@@ -549,16 +575,18 @@
                       </p>
                     </div>
                   </div>
-                  <picture class="card2__image">
-                    <source srcset="./assets/images/common/blog3.webp" type="image/webp" />
-                    <img
-                      width="301"
-                      height="201"
-                      loading="lazy"
-                      src="./assets/images/common/blog3.png"
-                      alt="blogの画像3"
-                    />
-                  </picture>
+                  <div class="card2__image">
+                    <picture>
+                      <source srcset="./assets/images/common/blog3.webp" type="image/webp" />
+                      <img
+                        width="301"
+                        height="201"
+                        loading="lazy"
+                        src="./assets/images/common/blog3.png"
+                        alt="blogの画像3"
+                      />
+                    </picture>
+                  </div>
                 </div>
               </a>
             </div>
@@ -588,16 +616,18 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <picture class="card3__image slideImage js-slideImage">
-                      <source srcset="./assets/images/common/voice1.webp" type="image/webp" />
-                      <img
-                        width="151"
-                        height="117"
-                        loading="lazy"
-                        src="./assets/images/common/voice1.png"
-                        alt="voiceの画像1"
-                      />
-                    </picture>
+                    <div class="card3__image slideImage js-slideImage">
+                      <picture>
+                        <source srcset="./assets/images/common/voice1.webp" type="image/webp" />
+                        <img
+                          width="151"
+                          height="117"
+                          loading="lazy"
+                          src="./assets/images/common/voice1.png"
+                          alt="voiceの画像1"
+                        />
+                      </picture>
+                    </div>
                   </div>
                   <div class="card3__content">
                     <p class="card3__text">
@@ -621,16 +651,18 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <picture class="card3__image slideImage js-slideImage">
-                      <source srcset="./assets/images/common/voice2.webp" type="image/webp" />
-                      <img
-                        width="151"
-                        height="117"
-                        loading="lazy"
-                        src="./assets/images/common/voice2.png"
-                        alt="voiceの画像2"
-                      />
-                    </picture>
+                    <div class="card3__image slideImage js-slideImage">
+                      <picture>
+                        <source srcset="./assets/images/common/voice2.webp" type="image/webp" />
+                        <img
+                          width="151"
+                          height="117"
+                          loading="lazy"
+                          src="./assets/images/common/voice2.png"
+                          alt="voiceの画像2"
+                        />
+                      </picture>
+                    </div>
                   </div>
                   <div class="card3__content">
                     <p class="card3__text">
@@ -729,25 +761,27 @@
                   </dl>
                 </li>
               </ul>
-              <picture class="top-price__image slideImage js-slideImage">
-                <source
-                  media="(max-width: 767px)"
-                  srcset="./assets/images/common/price-sp.webp"
-                  type="image/webp"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="./assets/images/common/price-pc.webp"
-                  type="image/webp"
-                />
-                <img
-                  width="345"
-                  height="227"
-                  loading="lazy"
-                  src="./assets/images/common/price-sp.png"
-                  alt=""
-                />
-              </picture>
+              <div class="top-price__image slideImage js-slideImage">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/price-sp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/price-pc.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    width="345"
+                    height="227"
+                    loading="lazy"
+                    src="./assets/images/common/price-sp.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
             </div>
             <div class="top-price__button">
               <a href="#" class="button">view more</a>
