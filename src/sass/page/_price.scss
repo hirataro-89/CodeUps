@@ -1,23 +1,23 @@
 @use "global" as *;
 
-.top-price--layout {
+.price--topLayout {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: rem(140);
     }
 }
 
-.top-price__bg {
+.price__bg {
     background-color: $bg-blue;
     padding: rem(80) 0;
     @include mq(md) {
         padding: rem(100) 0;
     }
 }
-.top-price__inner {
+.price__inner {
     position: relative;
 }
-.top-price__inner::before {
+.price__inner::before {
     @include mq(md) {
         content: "";
         display: block;
@@ -35,12 +35,12 @@
 
 }
 
-.top-price__title {
+.price__title {
     text-align: center;
 }
 
 
-.top-price__body {
+.price__body {
     display: flex;
     flex-direction: column-reverse;
     margin-top: rem(24);
@@ -51,7 +51,7 @@
     }
 }
 
-.top-price__list {
+.price__list {
     margin-top: rem(40);
     @include mq(md) {
         margin-top: 0;
@@ -59,7 +59,7 @@
     }
 }
 
-.top-price__image {
+.price__image {
     aspect-ratio: 345 / 227;
     max-width: 100%;
     @include mq(md) {
@@ -69,12 +69,12 @@
     }
 }
 
-.top-price__image img {
+.price__image img {
     object-fit: cover;
     height: 100%;
 }
 
-.top-price__button {
+.price__button {
     text-align: center;
     margin-top: rem(40);
     @include mq(md) {

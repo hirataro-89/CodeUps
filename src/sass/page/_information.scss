@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.top-information--layout {
+.information--topLayout {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: rem(140);
     }
 }
 
-.top-information__bg {
+.information__bg {
     background-color: $bg-blue;
     padding: rem(80) 0;
     @include mq(md) {
@@ -15,11 +15,11 @@
     }
 }
 
-.top-information__title {
+.information__title {
     text-align: center;
 }
 
-.top-information__media {
+.information__media {
     margin-top: rem(24);
     @include mq(md) {
         margin-top: rem(40);

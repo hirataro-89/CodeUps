@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.top-blog--layout {
+.blog--topLayout {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: 0;
     }
 }
 
-.top-blog__bg {
+.blog__bg {
     @include mq(md) {
         background-image: url(../images/common/blog-bg.jpg);
         background-size: 100% 60.2%;
@@ -17,11 +17,11 @@
     }
 }
 
-.top-blog__inner {
+.blog__inner {
     position: relative;
 }
 
-.top-blog__inner::before {
+.blog__inner::before {
     @include mq(md) {
         content: "";
         display: block;
@@ -38,18 +38,18 @@
     }
 }
 
-.top-blog__title {
+.blog__title {
     text-align: center;
 }
 
-.top-blog__cards {
+.blog__cards {
     margin-top: rem(24);
     @include mq(md) {
         margin-top: rem(80);
     }
 }
 
-.top-blog__button {
+.blog__button {
     text-align: center;
     margin-top: rem(40);
     @include mq(md) {

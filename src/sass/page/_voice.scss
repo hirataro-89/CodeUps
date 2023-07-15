@@ -1,17 +1,17 @@
 @use "global" as *;
 
-.top-voice--layout {
+.voice--topLayout {
     margin-top: rem(80);
     @include mq(md) {
         margin-top: rem(140);
     }
 }
 
-.top-voice__inner {
+.voice__inner {
     position: relative;
 }
 
-.top-voice__inner::before {
+.voice__inner::before {
     @include mq(md) {
         content: "";
         display: block;
@@ -27,7 +27,7 @@
         right: clamp(rem(590), 18.161rem + 43.15vw, rem(880));
     }
 }
-.top-voice__inner::after {
+.voice__inner::after {
     @include mq(md) {
         content: "";
         display: block;
@@ -43,18 +43,18 @@
         right: rem(24);
     }
 }
-.top-voice__title {
+.voice__title {
     text-align: center;
 }
 
-.top-voice__cards {
+.voice__cards {
     margin-top: rem(40);
     @include mq(md) {
         margin-top: rem(40);
     }
 }
 
-.top-voice__button {
+.voice__button {
     text-align: center;
     margin-top: rem(40);
     @include mq(md) {
