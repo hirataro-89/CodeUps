@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     /* swiper mainView */
-    const mainviewSwiper = new Swiper('.mainViewSwiper', {
+    const mainviewSwiper = new Swiper('.js-mainViewSwiper', {
         loop: true,
         autoplay: {
             delay: 7000,
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     /* swiper campaig */
-    const campaignSwiper = new Swiper('.campaignSwiper__slider', {
+    const campaignSwiper = new Swiper('.js-campaignSwiper__slider', {
         loop: true,
         freeMode: true,
         speed: 900,

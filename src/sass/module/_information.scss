@@ -1,13 +1,6 @@
 @use "global" as *;
 
-.information--topLayout {
-    margin-top: rem(80);
-    @include mq(md) {
-        margin-top: rem(140);
-    }
-}
-
-.information__bg {
+.information {
     background-color: $bg-blue;
     padding: rem(80) 0;
     @include mq(md) {

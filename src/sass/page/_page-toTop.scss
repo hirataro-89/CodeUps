@@ -4,14 +4,9 @@
     position: sticky;
     bottom: rem(15);
     z-index: 5;
-    @include mq(md) {
-        bottom: rem(20);
-    }
-}
-
-.page-toTop--layout {
     margin-top: rem(36);
     @include mq(md) {
         margin-top: rem(60);
+        bottom: rem(20);
     }
 }

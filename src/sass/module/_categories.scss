@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.categories {
+
+}
+
+.categories__item {
+    display: inline-block;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+    padding: rem(6) rem(32);
+    @include mq(md) {
+        padding: rem(6) rem(16);
+    }
+
+}

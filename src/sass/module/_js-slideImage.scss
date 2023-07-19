@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.slideImage {
+.js-slideImage {
     position: relative;
     --toRight: 0%;
     --toLeft: 100%;
 }
 
-.slideImage::after {
+.js-slideImage::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -19,6 +19,6 @@
     clip-path: inset(0 var(--toRight) 0  var(--toLeft));
 }
 
-.slideImage img {
+.js-slideImage img {
     clip-path: inset(0 0 0 100%);
 }

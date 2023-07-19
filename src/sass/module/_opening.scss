@@ -13,16 +13,11 @@
 .opening__title {
     text-align: center;
     color: $accent-color;
-    line-height: 1;
     position: absolute;
     top: 50%;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-    @include mq(md) {
-        top: 56%;
-        left: 51%;
-    }
 }
 
 .opening__mainTitle {
@@ -30,7 +25,9 @@
     font-family: $title-font-family;
     text-transform: uppercase;
     font-weight: $normal;
+    line-height: calc(100 / 80);
     letter-spacing: 0.52em;
+    text-indent: 0.52em;
     font-size: rem(40);
     @include mq(md) {
         font-size: rem(80);

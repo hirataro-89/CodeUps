@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.campaignSwiper__wrapper {
+.js-campaignSwiper__wrapper {
     // box-shadow用
     padding-bottom: rem(10);
     align-items: stretch;
 }
 
-.campaignSwiper__prev,
-.campaignSwiper__next {
+.js-campaignSwiper__prev,
+.js-campaignSwiper__next {
     display: none;
     @include mq(md) {
         top: rem(2);
@@ -25,30 +25,30 @@
     }
 }
 
-.campaignSwiper__prev {
+.js-campaignSwiper__prev {
     left: inherit;
     right: rem(185);
 }
 
-.campaignSwiper__next {
+.js-campaignSwiper__next {
     right: rem(25);
 }
 
-.campaignSwiper__prev,
-.campaignSwiper__next {
+.js-campaignSwiper__prev,
+.js-campaignSwiper__next {
     transition: 0.4s;
 }
 
-.campaignSwiper__prev:hover,
-.campaignSwiper__next:hover {
+.js-campaignSwiper__prev:hover,
+.js-campaignSwiper__next:hover {
     opacity: 0.7;
     transform: scale(1.05);
     transition: 0.4s;
 }
 
 /* ボタンの矢印 */
-.campaignSwiper__prev::after,
-.campaignSwiper__next::after {
+.js-campaignSwiper__prev::after,
+.js-campaignSwiper__next::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -56,17 +56,17 @@
     height: rem(8);
     border-bottom: 1px solid $accent-color;
 }
-.campaignSwiper__prev::after {
+.js-campaignSwiper__prev::after {
     border-left: 1px solid $accent-color;
     transform: skew(-45deg) translateY(-50%);
 }
 
 
-.campaignSwiper__next::after {
+.js-campaignSwiper__next::after {
     border-right: 1px solid $accent-color;
     transform: skew(45deg) translateY(-50%);
 }
 
-.campaignSwiper__slide {
+.js-campaignSwiper__slide {
     height: auto;
 }

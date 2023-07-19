@@ -1,13 +1,6 @@
 @use "global" as *;
 
-.blog--topLayout {
-    margin-top: rem(80);
-    @include mq(md) {
-        margin-top: 0;
-    }
-}
-
-.blog__bg {
+.blog {
     @include mq(md) {
         background-image: url(../images/common/blog-bg.jpg);
         background-size: 100% 60.2%;
