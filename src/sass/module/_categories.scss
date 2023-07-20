@@ -1,18 +1,43 @@
 @use "global" as *;
 
 .categories {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: rem(16);
+    column-gap: rem(21);
+    @include mq(md) {
+        justify-content: flex-start;
+        column-gap: rem(32);
+    }
 }
 
 .categories__item {
-    display: inline-block;
     color: $accent-color;
+    background-color: $white;
     border: 1px solid $accent-color;
     font-size: rem(14);
-    line-height: calc(22 / 14);
-    padding: rem(6) rem(32);
-    @include mq(md) {
-        padding: rem(6) rem(16);
-    }
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    max-width: rem(160);
+    width: 100%;
+}
 
+.categories__item:hover {
+    color: $white;
+    background-color: $accent-color;
+}
+
+.categories__item a {
+    display: inline-block;
+    height: inherit;
+    width: 100%;
+    padding: rem(9) rem(20);
+}
+
+.categories__item--active {
+    background-color: $accent-color;
+    color: $white;
 }

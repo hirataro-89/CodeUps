@@ -34,6 +34,9 @@
 .card1__content {
     text-align: center;
     margin-top: auto;
+    @include mq(md) {
+        margin-top: 0;
+    }
 }
 
 .card1__text {
@@ -70,6 +73,40 @@
     }
 }
 
+.card1__description {
+    margin-top: rem(24);
+}
+
+.card1__description-text {
+
+}
+
+.card1__meta {
+    margin-top: auto;
+}
+
+.card1__date {
+    font-family: $title-font-family;
+    font-weight: $bold;
+    line-height: 1;
+    color: $accent-color;
+    text-align: center;
+    margin-top: rem(32);
+}
+
+.card1__attention {
+    text-align: center;
+    color: $accent-color;
+    font-size: rem(14);
+    line-height: 1;
+    margin-top: rem(7);
+}
+
+.card1__button {
+    text-align: center;
+    margin-top: rem(16);
+}
+
 .card1__image {
     aspect-ratio: 280 / 188;
     overflow: hidden;
@@ -80,6 +117,3 @@
     height: 100%;
 }
 
-.box__card {
-    width: 300px;
-}

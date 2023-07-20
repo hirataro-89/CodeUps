@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(12);
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	color: $accent-color;
+	background-color: $white;
+	white-space: nowrap;
+	transition: 0.2s ease-in-out;
+	border: solid 1px $accent-color;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1;
+    width: rem(38);
+    height: rem(38);
+    font-family: $title-font-family;
+}
+.wp-pagenavi a:hover{
+	color: $white;
+	background-color: $accent-color;
+}
+.wp-pagenavi span.current{
+	color: $white;
+	background-color: $accent-color;
+}
+
+.previouspostslink, .nextpostslink {
+    position: relative;
+}
+
+.previouspostslink {
+    margin-right: rem(28);
+}
+
+.nextpostslink {
+    margin-left: rem(28);
+}
+
+
+.previouspostslink::before, .nextpostslink::before {
+    content: "";
+    display: inline-block;
+    width: rem(11);
+    height: rem(11);
+    border-bottom: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    position: absolute;
+    top: 50%;
+}
+
+.previouspostslink::before {
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nextpostslink::before {
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.previouspostslink:hover::before, .nextpostslink:hover::before {
+    border-bottom: 1px solid $white;
+    border-left: 1px solid $white;
+}
