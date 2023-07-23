@@ -132,6 +132,4 @@ document.addEventListener('DOMContentLoaded',function(){
         .to(image, {clipPath: 'inset(0 0 0 0%)'}, '<')
         .to(slideImage, {'--toRight': '100%'})
     });
-
-
 })

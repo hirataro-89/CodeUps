@@ -9,7 +9,13 @@
         flex-direction: row-reverse;
         align-items: flex-start;
     }
+}
 
+.media__inner--reverse {
+    flex-direction: column;
+    @include mq(md) {
+        flex-direction: row;
+    }
 }
 
 .media__body {
