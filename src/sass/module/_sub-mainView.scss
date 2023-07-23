@@ -29,10 +29,17 @@
     text-transform: capitalize;
 }
 
-.sub-mainView--about {
+.sub-mainView--campaign {
     background-image: url(../images/pages/campaign-mv-sp.jpg);
     @include mq(md) {
         background-image: url(../images/pages/campaign-mv-pc.jpg);
+    }
+}
+
+.sub-mainView--about {
+    background-image: url(../images/pages/aboutus-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/aboutus-mv-pc.jpg);
     }
 }
 

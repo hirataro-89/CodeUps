@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.js-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.7);
+    margin: 0 auto;
+}
+
+.js-modal__image {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 90%;
+    overflow: hidden;
+    @include mq(md) {
+        max-width: rem(920);
+        width: 100%;
+    }
+}
+
+.js-modal__image img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}

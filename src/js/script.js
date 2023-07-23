@@ -1,7 +1,19 @@
 document.addEventListener('DOMContentLoaded',function(){
     jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+        /* modal */
+        $('.js-modal__trigger > img').click(function() {
+            let src = $(this).attr('src');
+            $(body).css('overflow-y', 'hidden')
+            $('.js-modal').fadeIn();
+            $('.js-modal__image > img').attr('src', src);
+        })
 
+        $('.js-modal, .js-modal__image > img').click(function(e) {
+            //モーダルをクリックすると閉じる
+            $(body).css('overflow-y', 'auto')
+            $('.js-modal').fadeOut();
+        })
     });
 
 
@@ -120,4 +132,6 @@ document.addEventListener('DOMContentLoaded',function(){
         .to(image, {clipPath: 'inset(0 0 0 0%)'}, '<')
         .to(slideImage, {'--toRight': '100%'})
     });
+
+
 })

@@ -1,10 +1,12 @@
 @use "global" as *;
 
-.about__inner {
+@use "global" as *;
+
+.subAbout__inner {
     position: relative;
 }
 
-.about__inner::before {
+.subAbout__inner::before {
     @include mq(md) {
         content: "";
         display: block;
@@ -22,34 +24,37 @@
     }
 }
 
-.about__title {
+.subAbout__title {
     text-align: center;
 }
 
-.about__subtitle {
+.subAbout__subtitle {
     font-size: rem(40);
     color: $accent-color;
     line-height: 1;
     font-family: $second-font-family;
     font-weight: $normal;
+    position: absolute;
+    top: rem(24);
+    left: rem(24);
+    color: $white;
     @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 0;
         font-size: rem(80);
         color: $white;
         line-height: calc(100 / 80);
     }
 }
 
-.about__box {
+.subAbout__box {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: rem(24);
-    @include mq(md) {
-        position: relative;
-        margin-top: rem(40);
-    }
+    position: relative;
 }
 
-.about__body {
+.subAbout__body {
     margin-top: rem(40);
     @include mq(md) {
         margin-top: 0;
@@ -65,40 +70,34 @@
     }
 }
 
-.about__content {
-    margin-top: rem(16);
+.subAbout__content {
     @include mq(md) {
         max-width: rem(400);
+        padding-top: rem(50);
         width: 100%;
         margin-top: 0;
         color: $white;
     }
 }
 
-.about__button {
-    text-align: center;
-    margin-top: rem(40);
-}
-
-.about__image {
-    display: block;
-}
-
-.about__image img {
+.subAbout__image img {
     object-fit: cover;
     height: 100%;
 }
 
-.about__image--small {
+.subAbout__image--small {
     aspect-ratio: 128 / 194;
     width: calc(128 / 345) * 100%;
     position: relative;
     z-index: 1;
 }
 
-.about__image--large {
+.subAbout__image--large {
     aspect-ratio: 281 / 186;
-    width: calc(281 / 345) * 100%;
-    margin-top: -49%;
-    margin-left: auto;
+    width: 100%;
+    @include mq(md) {
+        width: calc(281 / 345) * 100%;
+        margin-top: -49%;
+        margin-left: auto;
+    }
 }
