@@ -10,7 +10,6 @@
 
 }
 .wp-pagenavi a, .wp-pagenavi span {
-    display: inline-flex;
     justify-content: center;
     align-items: center;
 	color: $accent-color;
@@ -20,9 +19,9 @@
 	border: solid 1px $accent-color;
     font-size: rem(16);
     font-weight: $bold;
-    line-height: 1;
     width: rem(38);
     height: rem(38);
+    line-height: rem(38);
     font-family: $title-font-family;
 }
 .wp-pagenavi a:hover{

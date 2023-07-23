@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.subPage-inner {
+    position: relative;
+}
+
+.subPage-inner::before {
+    content: "";
+    display: block;
+    max-width: rem(301);
+    width: 32vw;
+    aspect-ratio: 301 / 138;
+    background-image: url(../images/common/bg-fish2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: rem(-25);
+    z-index: -1;
+    @include mq(md) {
+        top: rem(-70);
+        right: clamp(rem(590), 18.161rem + 43.15vw, rem(880));
+    }
+}
