@@ -51,12 +51,18 @@
       </div>
       <div class="archive-information subInformation">
         <div class="subInformation__inner inner subPage-inner">
-          <div class="subInformation__categories">
-            <a href="./archive-information.html/licence" class="subInformation__category is-active">ライセンス<span>講習</span></a>
-            <a href="./archive-information.html/fandiving" class="subInformation__category">ファン<span>ダイビング</span></a>
-            <a href="./archive-information.html/experience" class="subInformation__category">体験<span>ダイビング</span></a>
-          </div>
-          <div class="subInformation__media media media">
+          <ul class="subInformation__categories js-tab">
+            <li class="subInformation__category js-tabTrigger is-active">
+              <a href="#licence">ライセンス<span>講習</span></a>
+            </li>
+            <li class="subInformation__category js-tabTrigger">
+              <a href="#fandiving">ファン<span>ダイビング</span></a>
+            </li>
+            <li class="subInformation__category js-tabTrigger">
+              <a href="#experience">体験<span>ダイビング</span></a>
+            </li>
+          </ul>
+          <div class="subInformation__media media js-tabMenu is-active" id="licence">
             <div class="media__inner media__inner--reverse">
               <div class="media__body">
                 <h3 class="media__title cardTitle">ライセンス講習</h3>
@@ -73,7 +79,55 @@
                     width="345"
                     height="227"
                     loading="lazy"
-                    src="./assets/images/common/information.jpg"
+                    src="./assets/images/pages/information1.jpg"
+                    alt="ダイビング情報"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="subInformation__media media js-tabMenu" id="fandiving">
+            <div class="media__inner media__inner--reverse">
+              <div class="media__body">
+                <h3 class="media__title cardTitle">ファンダイビング</h3>
+                <div class="media__content">
+                  <p class="media__text">
+                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                  </p>
+                </div>
+              </div>
+              <div class="media__image">
+                <picture>
+                  <source srcset="./assets/images/pages/information2.webp" type="image/webp" />
+                  <img
+                    width="345"
+                    height="227"
+                    loading="lazy"
+                    src="./assets/images/pages/information2.jpg"
+                    alt="ダイビング情報"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="subInformation__media media js-tabMenu" id="experience">
+            <div class="media__inner media__inner--reverse">
+              <div class="media__body">
+                <h3 class="media__title cardTitle">体験ダイビング</h3>
+                <div class="media__content">
+                  <p class="media__text">
+                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                  </p>
+                </div>
+              </div>
+              <div class="media__image">
+                <picture>
+                  <source srcset="./assets/images/pages/information3.webp" type="image/webp" />
+                  <img
+                    width="345"
+                    height="227"
+                    loading="lazy"
+                    src="./assets/images/pages/information3.jpg"
                     alt="ダイビング情報"
                   />
                 </picture>
@@ -82,7 +136,6 @@
           </div>
         </div>
       </div>
-      
       <section class="page-contact page-contact--layout">
         <div class="page-contact__inner inner">
           <div class="page-contact__box contact">

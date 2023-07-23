@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded',function(){
             $(body).css('overflow-y', 'auto')
             $('.js-modal').fadeOut();
         })
+
+        /* タブメニュー */
+        $(function(e) {
+            $('.js-tabTrigger').on('click', function(e) {
+                e.stopImmediatePropagation();
+                let index = $('.js-tabTrigger').index(this);
+                $('.js-tabTrigger').removeClass('is-active');
+                $(this).addClass('is-active');
+                $('.js-tabMenu').removeClass('is-active');
+                $('.js-tabMenu').eq(index).addClass('is-active');
+            });
+        });
     });
 
 

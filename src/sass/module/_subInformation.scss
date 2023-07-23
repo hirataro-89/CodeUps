@@ -22,23 +22,29 @@
     font-size: rem(14);
     line-height: 1.5;
     color: $accent-color;
-    padding: rem(10);
     background-color: $bg-blue;
     text-align: center;
     transition: 0.2s;
+}
+
+.subInformation__category a {
+    padding: rem(10);
+    display: inline-block;
+    height: inherit;
     @include mq(md) {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: rem(24);
     }
+    width: 100%;
 }
 
 .subInformation__category span {
     display: inline-block;
 }
 
-.subInformation__category::before {
+.subInformation__category a::before {
     @include mq(md) {
         content: "";
         display: inline-block;
@@ -47,18 +53,19 @@
         background-color: $accent-color;
         mask-repeat: no-repeat;
         mask-position: center;
+        mask-size: contain;
         margin-right: rem(9);
         transition: 0.2s;
     }
 }
 
-.subInformation__category:nth-child(3n + 1)::before {
+.subInformation__category:nth-child(3n + 1) a::before {
     mask-image: url(../images/pages/informationCategory1.svg);
 }
-.subInformation__category:nth-child(3n + 2)::before {
+.subInformation__category:nth-child(3n + 2) a::before {
     mask-image: url(../images/pages/informationCategory2.svg);
 }
-.subInformation__category:nth-child(3n + 3)::before {
+.subInformation__category:nth-child(3n + 3) a::before {
     mask-image: url(../images/pages/informationCategory3.svg);
 }
 
@@ -66,9 +73,14 @@
     border: 1px solid $accent-color;
     padding: rem(24);
     margin-top: rem(16);
+    display: none;
     @include mq(md) {
         margin-top: rem(24);
     }
+}
+
+.subInformation__media.is-active {
+    display: block;
 }
 
 /* ===============================================
@@ -81,7 +93,7 @@
     color: $white;
 }
 
-.subInformation__category.is-active::before,
-.subInformation__category:hover::before {
+.subInformation__category.is-active a::before,
+.subInformation__category:hover a::before {
     background-color: $white;
 }
