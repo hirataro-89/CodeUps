@@ -50,3 +50,10 @@
     }
 }
 
+.sub-mainView--blog {
+    background-image: url(../images/pages/blog-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/blog-mv-pc.jpg);
+    }
+}
+

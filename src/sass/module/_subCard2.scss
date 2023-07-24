@@ -1,55 +1,54 @@
 @use "global" as *;
 
-.card2 {
+.subCard2 {
     display: block;
     transition: 0.4s;
 }
 
-.card2:hover .card2__image img{
-    transform: scale(1.1);
+.subCard2:hover .subCard2__image img{
+    transform: scale(1.05);
     transition: 0.4s;
 }
 
-
-.card2__inner {
+.subCard2__inner {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: rem(16) rem(16) rem(24);
+    padding: rem(16);
     display: flex;
-    flex-direction: column-reverse;
+    gap: rem(16);
+    flex-direction: row-reverse;
     justify-content: flex-end;
     background-color: $white;
     height: 100%;
 }
 
-.card2__body {
-    margin-top: rem(20);
-}
-
-.card2__date {
+.subCard2__date {
     font-family: $second-font-family;
     font-size: rem(12);
     line-height: 1;
 }
 
-.card2__title {
+.subCard2__title {
     font-size: rem(16);
     font-weight: $medium;
+    margin-top: rem(4);
 }
 
-.card2__content {
+.subCard2__content {
     margin-top: rem(14);
 }
 
-.card2__text {
+.subCard2__text {
     font-size: rem(16);
 }
 
-.card2__image {
-    aspect-ratio: 301 / 201;
+.subCard2__image {
+    max-width: rem(121);
+    width: 100%;
+    aspect-ratio: 121 / 90;
     overflow: hidden;
 }
 
-.card2__image img {
+.subCard2__image img {
     object-fit: cover;
     height: 100%;
     transition: 0.4s;

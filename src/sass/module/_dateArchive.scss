@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.dateArchive__month-list {
+    padding-left: rem(24);
+    margin-top: rem(4);
+    display: none;
+}
+
+
+.dateArchive__item + .dateArchive__item {
+    margin-top: rem(15);
+}
+
+.dateArchive__month-item + .dateArchive__month-item {
+    margin-top: rem(4);
+}
+
+.dateArchive__year,
+.dateArchive__month-item {
+    cursor: pointer;
+    color: $accent-color;
+    font-size: rem(24);
+    transition: 0.2s;
+}
+
+.dateArchive__year:hover,
+.dateArchive__month-item:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+
+/* ===============================================
+# 三角形
+=============================================== */
+.dateArchive__year,
+.dateArchive__month-item a {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+}
+
+.dateArchive__year::before,
+.dateArchive__month-item a::before {
+    content: "";
+    display: inline-block;
+    width: rem(16);
+    height: rem(20);
+    background-color: $accent-color;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    transition: 0.4s;
+}
+
+.dateArchive__year.is-open::before {
+    transform: translateY(rem(1)) rotate(90deg);
+    transition: 0.4s;
+}
+

@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.subCards1__item + .subCards1__item {
+    margin-top: rem(40);
+}

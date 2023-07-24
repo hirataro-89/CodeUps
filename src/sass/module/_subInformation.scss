@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.subInformation {
-
-}
-
-.subInformation__inner {
-
-}
-
 .subInformation__categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

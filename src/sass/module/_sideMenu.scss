@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.sideMenu {
+
+}
+
+.sideMenu__inner {
+    padding: 0 rem(24);
+    @include mq(md) {
+        padding: 0;
+    }
+}
+
+.sideMenu__block + .sideMenu__block {
+    margin-top: rem(80);
+}
+
+.sideMenu__title {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    font-weight: $normal;
+    font-size: rem(24);
+    border-left: 8px solid $accent-color;
+    padding-left: rem(16);
+}
+
+.sideMenu__title::before {
+    content: "";
+    display: inline-block;
+    width: rem(50);
+    height: rem(50);
+    background-image: url(../images/pages/sideMenu-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sideMenu__content {
+    margin-top: rem(24);
+}
+
+.sideMenu__button {
+    text-align: center;
+    margin-top: rem(40);
+}

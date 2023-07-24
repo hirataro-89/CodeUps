@@ -16,14 +16,47 @@ document.addEventListener('DOMContentLoaded',function(){
         })
 
         /* タブメニュー */
-        $(function(e) {
-            $('.js-tabTrigger').on('click', function(e) {
-                e.stopImmediatePropagation();
-                let index = $('.js-tabTrigger').index(this);
-                $('.js-tabTrigger').removeClass('is-active');
-                $(this).addClass('is-active');
-                $('.js-tabMenu').removeClass('is-active');
-                $('.js-tabMenu').eq(index).addClass('is-active');
+        //任意のタブにURLからリンクするための設定
+        function GethashID (hashIDName){
+            if(hashIDName){
+                //タブ設定
+                $('.js-tab li').find('a').each(function() { //タブ内のaタグ全てを取得
+                    var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
+                    if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+                        var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+                        $('.js-tab li').removeClass("is-active"); //タブ内のliについているactiveクラスを取り除き
+                        $(parentElm).addClass("is-active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+                        //表示させるエリア設定
+                        $(".js-tabMenu").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+                        $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加
+                    }
+                });
+            }
+        }
+
+        //タブをクリックしたら
+        $('.js-tab a').on('click', function() {
+            var idName = $(this).attr('href'); //タブ内のリンク名を取得
+            GethashID (idName);//設定したタブの読み込みと
+            return false;//aタグを無効にする
+        });
+
+
+        // 上記の動きをページが読み込まれたらすぐに動かす
+        $(window).on('load', function () {
+            $('.js-tab li:first-of-type').addClass("is-active"); //最初のliにactiveクラスを追加
+            $('.js-tabMenu:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+            var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+            GethashID (hashName);//設定したタブの読み込み
+        });
+
+        /* accordiong */
+        $(function() {
+            $('.js-accordionItem:first-of-type .js-accordionContents').css('display', 'block');
+            $('.js-accordionItem:first-of-type .js-accordionTrigger').addClass('is-open');
+            $('.js-accordionTrigger').on('click', function() {
+                $(this).next().slideToggle(400);
+                $(this).toggleClass('is-open', 400);
             });
         });
     });

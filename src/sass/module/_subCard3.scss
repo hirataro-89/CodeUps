@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.subCard3 {
+    display: block;
+    transition: 0.4s;
+}
+
+.subCard3:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+.subCard3__inner {
+    height: 100%;
+    @include mq(md) {
+        padding: rem(24);
+    }
+}
+
+.subCard3__body {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.subCard3__content {
+    padding-top: rem(16);
+    margin-top: auto;
+}
+
+.subCard3__meta {
+    display: block;
+    font-size: rem(12);
+}
+
+.subCard3__title {
+    font-weight: $medium;
+    font-size: rem(24);
+    margin-top: rem(8);
+}
+
+.subCard3__image {
+    aspect-ratio: 294 / 218;
+    overflow: hidden;
+}
+
+.subCard3__image img {
+    object-fit: cover;
+    height: 100%;
+}
