@@ -57,3 +57,10 @@
     }
 }
 
+.sub-mainView--voice {
+    background-image: url(../images/pages/voice-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/voice-mv-pc.jpg);
+    }
+}
+

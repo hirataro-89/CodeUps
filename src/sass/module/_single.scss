@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.single {
-
-}
-
 .single__inner {
     @include mq(md) {
         display: flex;

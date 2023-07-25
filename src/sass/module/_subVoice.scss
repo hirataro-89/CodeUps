@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.subVoice__categories {
+    max-width: rem(500);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md) {
+        max-width: inherit;
+        margin-right: inherit;
+        margin-left: inherit;
+    }
+}
+
+.subVoice__items {
+    margin-top: rem(40);
+    // @include mq(md) {
+    //     grid-template-columns: repeat(2, 1fr);
+    //     row-gap: rem(80);
+    //     column-gap: clamp(rem(25), 0.491rem + 2.23vw, rem(40));
+    // }
+}
+
+.subVoice__item {
+    max-width: rem(280);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        max-width: rem(520);
+        width: calc(520 / 1080) * 100%;
+    }
+}
+
+.subVoice__pagenavi {
+    margin-top: rem(80);
+}
