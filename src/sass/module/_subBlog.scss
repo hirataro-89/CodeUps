@@ -1,12 +1,10 @@
 @use "global" as *;
 
-.subBlog {
-
-}
-
 .subBlog__inner {
-    display: flex;
-    gap: rem(90);
+    @include mq(md) {
+        display: flex;
+        gap: rem(90);
+    }
 }
 
 .subBlog__cards {

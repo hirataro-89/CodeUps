@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.pageLink {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(82);
+}
+
+.pageLink__prev,
+.pageLink__next {
+    display: inline-block;
+    color: $accent-color;
+    background-color: $white;
+    transition: 0.2s ease-in-out;
+    border: solid 1px $accent-color;
+    width: rem(38);
+    height: rem(38);
+    position: relative;
+}
+
+.pageLink__prev:hover,
+.pageLink__next:hover {
+    color: $white;
+	background-color: $accent-color;
+}
+
+.pageLink__prev::before, .pageLink__next::before {
+    content: "";
+    display: inline-block;
+    width: rem(11);
+    height: rem(11);
+    border-bottom: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    position: absolute;
+    top: 50%;
+}
+
+.pageLink__prev::before {
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.pageLink__next::before {
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.pageLink__prev:hover::before, .pageLink__next:hover::before {
+    border-bottom: 1px solid $white;
+    border-left: 1px solid $white;
+}
