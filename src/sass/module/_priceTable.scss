@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.priceTable {
+    @include mq(md) {
+        display: flex;
+    }
+}
+
+.priceTable__title {
+    color: $white;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    padding: rem(8) rem(16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(8);
+    font-size: rem(16);
+    @include mq(md) {
+        flex-direction: column-reverse;
+        width: calc(200 / 700 * 100%);
+        max-width: 100%;
+    }
+}
+
+.priceTable__title::before {
+    content: "";
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    background-image: url(../images/pages/informationCategory1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq(md) {
+        width: rem(64);
+        height: rem(64);
+    }
+}
+
+.priceTable__body {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.priceTable__body tr {
+    height: rem(60);
+}
+
+.priceTable__head,
+.priceTable__data {
+    border: 1px solid $accent-color;
+    max-width: 100%;
+    padding: rem(6) rem(16);
+    background-color: $white;
+}
+
+.priceTable__head {
+    text-align: center;
+    width: calc(240 / 345 * 100%);
+    font-weight: $normal;
+    @include mq(md) {
+        width: calc(340 / 700 * 100%);
+        text-align: left;
+    }
+}
+
+.priceTable__data {
+    text-align: right;
+    width: calc(106 / 345 * 100%);
+    @include mq(md) {
+        width: calc(162 / 700 * 100%);
+    }
+}
