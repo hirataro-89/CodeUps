@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.faqItem {
+
+}
+
+.faqItem__question {
+    background-color: $accent-color;
+    color: $white;
+    font-size: rem(16);
+    padding: rem(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(10);
+    cursor: pointer;
+    border: 1px solid $accent-color;
+    @include mq(md) {
+        font-size: rem(20);
+        padding: rem(25) rem(40);
+    }
+}
+
+.faqItem__icon {
+    width: rem(28);
+    height: rem(28);
+    position: relative;
+}
+
+.faqItem__icon span {
+    background-color: $white;
+    display: inline-block;
+    width: 100%;
+    height: rem(2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+
+.faqItem__icon span:first-child {
+    transform: rotate(90deg);
+}
+
+.faqItem__answer {
+    border: 1px solid $accent-color;
+    font-size: rem(16);
+    padding: rem(16) rem(24);
+    display: none;
+    @include mq(md) {
+        padding: rem(40);
+        margin-top: rem(16);
+    }
+}
+
+/* ===============================================
+# is-open時
+=============================================== */
+
+.faqItem__icon.is-open span {
+    transform: rotate(180deg);
+    transition: 0.4s;
+}

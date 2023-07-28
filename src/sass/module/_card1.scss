@@ -54,7 +54,7 @@
 }
 
 .card1__price {
-    font-family: 'Lato', sans-serif;
+    font-family: $title-font-family;
     font-weight: $bold;
     line-height: 1;
     margin-top: rem(8);

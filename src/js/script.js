@@ -50,13 +50,23 @@ document.addEventListener('DOMContentLoaded',function(){
             GethashID (hashName);//設定したタブの読み込み
         });
 
-        /* accordiong */
+        /* accordiong blog-archive */
         $(function() {
             $('.js-accordionItem:first-of-type .js-accordionContents').css('display', 'block');
             $('.js-accordionItem:first-of-type .js-accordionTrigger').addClass('is-open');
             $('.js-accordionTrigger').on('click', function() {
                 $(this).next().slideToggle(400);
                 $(this).toggleClass('is-open', 400);
+            });
+        });
+
+        /* accordiong faq */
+        $(function() {
+            $('.js-faq:first-of-type .js-faqContents').css('display', 'block');
+            $('.js-faq:first-of-type .js-faqIcon').addClass('is-open');
+            $('.js-faqTrigger').on('click', function() {
+                $(this).next().slideToggle(400);
+                $(this).children('.js-faqIcon').toggleClass('is-open', 400);
             });
         });
     });
