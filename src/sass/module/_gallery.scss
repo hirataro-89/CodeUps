@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.gallery {
-
-}
-
 .gallery__inner {
     position: relative;
 }
@@ -49,9 +45,13 @@
     }
 }
 
+.gallery__items:nth-child(n + 2),
+.gallery__reverseItems:nth-child(n + 2) {
+    margin-top: rem(8);
+}
+
 
 .gallery__reverseItems {
-    margin-top: rem(8);
     @include mq(md) {
         grid-template-columns: 1fr calc(492 / 1080) * 100%;
     }
@@ -101,5 +101,3 @@
     height: 100%;
     object-fit: cover;
 }
-
-

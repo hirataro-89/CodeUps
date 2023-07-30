@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.other__body {
+    max-width: rem(800);
+    margin: 0 auto;
+}
+
+.other__title h2 {
+    font-size: rem(24);
+    font-weight: $medium;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.other__content {
+    margin-top: rem(40);
+    line-height: 2;
+}
+
+.other__content ul {
+    margin-top: rem(10);
+}
+
+.other__content ol {
+    margin-top: rem(40);
+    list-style: decimal;
+    padding-left: 1em;
+}
+
+.other__content p:not(:first-child) {
+    margin-top: rem(40);
+}

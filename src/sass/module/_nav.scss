@@ -6,6 +6,10 @@
     line-height: calc(18 / 16);
 }
 
+.nav--black {
+    color: $text-color;
+}
+
 .nav__wrapper {
     display: flex;
     gap: rem(8);
@@ -51,12 +55,16 @@
     display: inline-block;
     width: rem(18);
     height: rem(18);
-    background-image: url(../images/common/menu-icon.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: $white;
+    mask-image: url(../images/common/menu-icon.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
     position: absolute;
     left: 0;
+}
+
+.nav__item--black > a::before {
+    background-color: $text-color;
 }
 
 .nav__item a:hover {

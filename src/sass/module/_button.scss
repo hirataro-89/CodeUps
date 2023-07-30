@@ -56,11 +56,46 @@
 .button:hover {
     color: $accent-color;
 }
+
 .button:hover::before {
     transform: scaleX(1);
 }
+
 .button:hover::after {
     border-bottom: 1px solid $accent-color;
     border-right: 1px solid $accent-color;
     transition: 0.4s;
+}
+
+/* ===============================================
+# 404ページのボタン
+=============================================== */
+
+.button span {
+    text-transform: uppercase;
+}
+
+.button--white {
+    background-color: $white;
+    color: $accent-color;
+    border: 1px solid $white;
+    box-shadow: 4px 4px 0 -1px $accent-color, 4px 4px 0 0 $white;
+}
+
+.button--white::before {
+    background-color: $accent-color;
+}
+
+.button--white::after {
+    border-bottom: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+}
+
+.button--white:hover {
+    color: $white;
+}
+
+.button--white:hover::after {
+    border-bottom: 1px solid $white;
+    border-right: 1px solid $white;
 }

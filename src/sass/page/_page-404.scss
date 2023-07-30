@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.page-404 {
+    background-color: $accent-color;
+}
+
+.page-404__inner {
+    position: relative;
+    padding-top: rem(50);
+    padding-bottom: rem(72);
+    @include mq(md) {
+        padding-top: rem(120);
+        padding-bottom: rem(144);
+    }
+}
+
+.page-404__inner::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vw;
+    max-width: rem(400);
+    max-height: rem(400);
+    background-image: url(../images/pages/404.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mq(md) {
+        max-width: rem(698);
+        max-height: rem(698);
+    }
+
+}
+
+.page-404__title {
+    text-align: center;
+    color: $white;
+}
+
+.page-404__title h1 {
+    font-weight: $normal;
+    font-family: $title-font-family;
+    letter-spacing: 0.5em;
+    text-indent: 0.25em;
+    // line-height: 1;
+    font-size: rem(80);
+    @include mq(md) {
+        font-size: rem(160);
+    }
+}
+
+.page-404__content {
+    text-align: center;
+    color: $white;
+}
+
+.page-404__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}

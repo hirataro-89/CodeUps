@@ -19,11 +19,16 @@
     font-weight: $normal;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
     @include mq(md) {
         font-size: rem(80);
     }
+}
+
+.sub-mainView__title--capitalize {
+    text-transform: capitalize;
 }
 
 .sub-mainView__title::first-letter {
@@ -83,5 +88,12 @@
     background-image: url(../images/pages/contact-mv-sp.jpg);
     @include mq(md) {
         background-image: url(../images/pages/contact-mv-pc.jpg);
+    }
+}
+
+.sub-mainView--other {
+    background-image: url(../images/pages/other-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/other-mv-pc.jpg);
     }
 }
