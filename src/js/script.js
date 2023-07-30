@@ -69,8 +69,33 @@ document.addEventListener('DOMContentLoaded',function(){
                 $(this).children('.js-faqIcon').toggleClass('is-open', 400);
             });
         });
-    });
 
+        /* contact form */
+        $('#form').submit(function (event) {
+            var formData = $('#form').serialize();
+            if (
+                $('#form input[type="text"]').val() !== "" &&
+                $('#form input[type="email"]').val() !== "" &&
+                $('#form input[type="checkbox"]').val() !== "" &&
+                $('#form').prop('checked') === true
+            ) {
+                $.ajax({
+                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSesb19wEo6UAarKohTwEdeozorvVF_ZvGRpKxk2B6W4vkjKqQ/formResponse",
+                    data: formData,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            $("#form").fadeOut();
+                            $(".js-thanks").fadeIn();
+                        },
+                }});
+                event.preventDefault();
+            } else {
+                $('.form__error').addClass('is-error');
+            }
+        });
+    });
 
     /* opening animation */
     gsap.utils.toArray('.js-curtain').forEach((openingCurtain) => {

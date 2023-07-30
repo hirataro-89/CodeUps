@@ -1,7 +1,4 @@
 @use "./base/**";
+@use "./plugin/**/*";
 @use "./page/**/*";
 @use "./module/**/*";
-
-.spacer {
-    height: 50vh;
-}

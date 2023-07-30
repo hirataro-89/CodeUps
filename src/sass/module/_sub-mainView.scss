@@ -12,6 +12,7 @@
 }
 
 .sub-mainView__title {
+    font-family: $title-font-family;
     color: $white;
     font-size: rem(40);
     line-height: 1;
@@ -71,3 +72,16 @@
     }
 }
 
+.sub-mainView--faq {
+    background-image: url(../images/pages/faq-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/faq-mv-pc.jpg);
+    }
+}
+
+.sub-mainView--contact {
+    background-image: url(../images/pages/contact-mv-sp.jpg);
+    @include mq(md) {
+        background-image: url(../images/pages/contact-mv-pc.jpg);
+    }
+}

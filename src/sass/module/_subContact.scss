@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.subContact__form {
+    @include mq(md) {
+        margin: 0 auto;
+        max-width: rem(700);
+    }
+}
+
+.subContact__thanks {
+    text-align: center;
+    display: none;
+}
+
+.subContact__thanks p:not(:first-child) {
+    margin-top: rem(40);
+}
