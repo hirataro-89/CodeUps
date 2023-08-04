@@ -10,3 +10,10 @@
     background-color: $accent-color;
     color: $white;
 }
+
+.breadcrumb--404 {
+    padding-top: rem(88);
+    @include mq(md) {
+        padding-top: rem(98);
+    }
+}
