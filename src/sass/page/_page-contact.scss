@@ -34,6 +34,6 @@
     @include mq(md) {
         top: rem(-40);
         right: inherit;
-        left: clamp(rem(550), 8.5904rem + 60.3717vw, rem(930));
+        left: clamp(rem(550), 8.5904rem + 60.3717vw, rem(890));
     }
 }
