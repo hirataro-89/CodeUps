@@ -1,7 +1,14 @@
 @use "global" as *;
 
-.page-contact {
+.page-contact--layout {
     margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
+}
+
+.page-contact--subLayout {
+    margin-top: rem(105);
     @include mq(md) {
         margin-top: rem(140);
     }

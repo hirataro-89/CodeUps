@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: rem(16);
     column-gap: rem(21);
     @include mq(md) {
-        justify-content: flex-start;
+        display: flex;
+        flex-wrap: wrap;
         column-gap: rem(32);
     }
 }
@@ -21,7 +21,7 @@
     text-transform: uppercase;
     text-align: center;
     transition: 0.2s ease-in-out;
-    max-width: rem(160);
+    max-width: rem(162);
     width: 100%;
 }
 
@@ -37,7 +37,7 @@
     padding: rem(9) rem(20);
 }
 
-.categories__item--active {
-    background-color: $accent-color;
+.categories__item.is-active {
     color: $white;
+    background-color: $accent-color;
 }

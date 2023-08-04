@@ -1,19 +1,19 @@
 @use "global" as *;
 
-.footer--layout {
-    margin-top: rem(15);
-    @include mq(md) {
-        margin-top: rem(20);
-    }
-}
-
-.footer__bg {
+.footer {
     background-color: $accent-color;
     padding-top: rem(48);
     padding-bottom: rem(56);
     @include mq(md) {
         padding-top: rem(80);
         padding-bottom: rem(80);
+    }
+}
+
+.footer--layout {
+    margin-top: rem(15);
+    @include mq(md) {
+        margin-top: rem(20);
     }
 }
 

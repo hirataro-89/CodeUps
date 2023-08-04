@@ -29,6 +29,11 @@
 }
 
 .card3__head-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
     width: 47.6038%;
     margin-top: auto;
     @include mq(md) {

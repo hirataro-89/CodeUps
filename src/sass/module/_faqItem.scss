@@ -45,7 +45,7 @@
 .faqItem__answer {
     border: 1px solid $accent-color;
     font-size: rem(16);
-    padding: rem(16) rem(24);
+    padding: rem(24) rem(16);
     display: none;
     @include mq(md) {
         padding: rem(40);

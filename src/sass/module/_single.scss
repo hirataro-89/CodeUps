@@ -13,12 +13,12 @@
     font-family: $second-font-family;
 }
 
-.single__title {
-    font-size: rem(24);
-}
-
 .single__title h2 {
+    font-size: rem(24);
     font-weight: $medium;
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
 .single__image,
@@ -54,7 +54,10 @@
 }
 
 .single__pageLink {
-    margin-top: rem(80);
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
 }
 
 .single__side {

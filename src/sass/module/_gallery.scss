@@ -16,9 +16,9 @@
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        top: rem(-67);
+        top: rem(-86);
         right: inherit;
-        left: clamp(rem(550), 8.5904rem + 60.3717vw, rem(930));
+        left: clamp(rem(550), 8.5904rem + 60.3717vw, rem(900));
     }
 }
 
@@ -29,75 +29,53 @@
     }
 }
 
-.gallery__items,
-.gallery__reverseItems {
+.gallery__items {
     display: grid;
     gap: rem(8);
+    grid-template-columns: repeat(1, 1fr);
     @include mq(md) {
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-auto-flow: dense;
     }
 }
 
-
-.gallery__items {
-    @include mq(md) {
-        grid-template-columns: calc(492 / 1080) * 100% 1fr;
-    }
+// 1枚目,6枚目
+.gallery__item:nth-child(6n + 1),
+.gallery__item:nth-child(6n) {
+    grid-column: span 5;
+    grid-row: span 2;
 }
 
-.gallery__items:nth-child(n + 2),
-.gallery__reverseItems:nth-child(n + 2) {
-    margin-top: rem(8);
-}
-
-
-.gallery__reverseItems {
-    @include mq(md) {
-        grid-template-columns: 1fr calc(492 / 1080) * 100%;
-    }
-}
-
-.gallery__item:first-child {
-    @include mq(md) {
-        grid-row: 1 / 3;
-    }
-}
-
-
-.gallery__reverseItem:last-child {
-    @include mq(md) {
-        grid-row: 1 / 3;
-        grid-column: 2 / 3;
-    }
+//2〜3枚目
+.gallery__item:not(:nth-child(6n)):not(:nth-child(6n + 1)) {
+    grid-column: span 6;
+    grid-row: span 1;
 }
 
 /* 画像の比率管理 */
-.gallery__item:first-child,
-.gallery__reverseItem:last-child {
-    aspect-ratio: 492 / 746;
-}
 
-.gallery__item:not(:first-child),
-.gallery__reverseItem:not(:last-child) {
-    aspect-ratio: 580 / 369;
-}
-
-.gallery__item,
-.gallery__reverseItem {
+.gallery__item {
     cursor: pointer;
     transition: 0.4s;
     overflow: hidden;
 }
 
+.gallery__item:nth-child(6n),
+.gallery__item:nth-child(6n + 1) {
+    aspect-ratio: 492 / 760;
+}
 
-.gallery__item:hover,
-.gallery__reverseItem:hover {
+.gallery__item:not(:nth-child(6n)):not(:nth-child(6n + 1)) {
+    aspect-ratio: 580 / 369;
+}
+
+.gallery__item:hover {
     opacity: 0.7;
     transition: 0.4s;
 }
 
-.gallery__item img,
-.gallery__reverseItem img {
+.gallery__item img {
     height: 100%;
     object-fit: cover;
 }

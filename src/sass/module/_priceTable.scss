@@ -18,8 +18,8 @@
     font-size: rem(16);
     @include mq(md) {
         flex-direction: column-reverse;
-        width: calc(200 / 700 * 100%);
-        max-width: 100%;
+        max-width: rem(200);
+        width: 100%;
     }
 }
 
@@ -67,8 +67,8 @@
 
 .priceTable__data {
     text-align: right;
-    width: calc(106 / 345 * 100%);
+    width: calc(105 / 345 * 100%);
     @include mq(md) {
-        width: calc(162 / 700 * 100%);
+        width: calc(160 / 700 * 100%);
     }
 }

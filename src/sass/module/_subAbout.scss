@@ -1,29 +1,5 @@
 @use "global" as *;
 
-@use "global" as *;
-
-.subAbout__inner {
-    position: relative;
-}
-
-.subAbout__inner::before {
-    @include mq(md) {
-        content: "";
-        display: block;
-        width: 30.35vw;
-        max-width: rem(194);
-        aspect-ratio: 194 / 181;
-        background-image: url(../images/common/bg-sango.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 1;
-        position: absolute;
-        bottom: -90px;
-        left: clamp(rem(625), 14.42rem + 57.59vw, rem(1012));
-    }
-}
-
 .subAbout__title {
     text-align: center;
 }
@@ -59,7 +35,7 @@
     @include mq(md) {
         margin-top: 0;
         position: absolute;
-        top: 50%;
+        top: 45%;
         right: rem(41);
         transform: translateY(-50%);
         z-index: 5;

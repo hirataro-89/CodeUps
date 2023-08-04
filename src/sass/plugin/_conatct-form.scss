@@ -99,7 +99,7 @@ button,
 	border-radius: 0;
 	/*↓カスタム */
 	// padding: $padding-und-btn $padding-lnr-btn;
-	padding: rem(16) rem(88) rem(16) rem(40);
+	padding: rem(16) rem(110) rem(16) rem(56);
 	// background: $back-cr-btn;
 	color: $font-cr-btn;
 	font-size: $fz-btn;
@@ -108,7 +108,7 @@ button,
 	border-radius: $border-r-btn;
 	// border: 1px solid $accent-color;
 	// box-shadow: 4px 4px 0 -1px $white, 4px 4px 0 0 $accent-color;
-	line-height: 1;
+	// line-height: 1;
 	overflow: hidden;
 	text-transform: capitalize;
 
@@ -256,7 +256,7 @@ select {
 	// background-position: right 12px center;
 	// background-repeat: no-repeat;
 	&:focus {
-		border-color: 1px solid $border-cr;
+		border: 1px solid $border-cr;
 	}
 }
 

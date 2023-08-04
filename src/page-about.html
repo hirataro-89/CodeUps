@@ -39,7 +39,135 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-    <!-- ヘッダーはあとから入れる -->
+    <header class="header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="/"><img src="./assets/images/common/logo.svg" alt="ロゴ画像" /></a>
+        </h1>
+        <nav class="header__pcNav pcNav u-desktop">
+          <ul class="pcNav__list">
+            <li class="pcNav__item">
+              <a href="./archive-campaign.html">
+                <span class="pcNav__enItem">campaign</span>
+                <span class="pcNav__jpItem">キャンペーン</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-about.html">
+                <span class="pcNav__enItem">about&nbsp;us</span>
+                <span class="pcNav__jpItem">私たちについて</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./archive-information.html">
+                <span class="pcNav__enItem">information</span>
+                <span class="pcNav__jpItem">ダイビング情報</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./home.html">
+                <span class="pcNav__enItem">blog</span>
+                <span class="pcNav__jpItem">ブログ</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./archive-voice.html">
+                <span class="pcNav__enItem">voice</span>
+                <span class="pcNav__jpItem">お客様の声</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-price.html">
+                <span class="pcNav__enItem">price</span>
+                <span class="pcNav__jpItem">料金</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-faq.html">
+                <span class="pcNav__enItem">FAQ</span>
+                <span class="pcNav__jpItem">よくある質問</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="page-contact.html">
+                <span class="pcNav__enItem">contact</span>
+                <span class="pcNav__jpItem">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="header__spNav nav u-mobile js-nav">
+          <div class="nav__wrapper inner">
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-campaign.html">キャンペーン</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ライセンス取得</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-about.html">私たちについて</a>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-information.html">ダイビング情報</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-information.html#licence">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#experience">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#fandiving">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./home.html">ブログ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-voice.html">お客様の声</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-price.html">料金一覧</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./page-price.html">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">ファンダイビング</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./page-faq.html">よくある質問</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-policy.html">プライバシー<span>ポリシー</span></a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-terms.html">利用規約</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-contact.html">お問い合わせ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-sitemap.html">サイトマップ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- ハンバーガーメニュー -->
+        <div class="header__drawer js-drawer u-mobile" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
     <main class="main">
       <div class="sub-mainView sub-mainView--about">
         <h1 class="sub-mainView__title">about us</h1>
@@ -49,8 +177,8 @@
           <div>top > 私たちについて</div>
         </div>
       </div>
-      <div class="subAbout page-about">
-        <div class="page-about__inner inner subPage-inner">
+      <div class="subAbout page-sub">
+        <div class="subAbout__inner inner subPage-inner">
           <div class="subAbout__box">
             <div class="subAbout__body">
               <h3 class="subAbout__subtitle">Dive into<br />the Ocean</h3>
@@ -59,7 +187,7 @@
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 </p>
                 <p class="subAbout__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 </p>
               </div>
             </div>
@@ -109,15 +237,13 @@
               <div class="gallery__item js-modal__trigger">
                 <img width="580" height="369" loading="lazy" src="./assets/images/pages/gallery3.jpg" alt="フォト3">
               </div>
-            </div>
-            <div class="gallery__reverseItems js-modal__trigger">
-              <div class="gallery__reverseItem js-modal__trigger">
+              <div class="gallery__item js-modal__trigger">
                 <img width="580" height="369" loading="lazy" src="./assets/images/pages/gallery4.jpg" alt="フォト4">
               </div>
-              <div class="gallery__reverseItem js-modal__trigger">
+              <div class="gallery__item js-modal__trigger">
                 <img width="580" height="369" loading="lazy" src="./assets/images/pages/gallery5.jpg" alt="フォト5">
               </div>
-              <div class="gallery__reverseItem js-modal__trigger">
+              <div class="gallery__item js-modal__trigger">
                 <img width="492" height="746" loading="lazy" src="./assets/images/pages/gallery6.jpg" alt="フォト6">
               </div>
             </div>
@@ -130,7 +256,7 @@
           </div>
         </div>
       </section>
-      <section class="page-contact page-contact--layout">
+      <section class="page-contact page-contact--subLayout">
         <div class="page-contact__inner inner">
           <div class="page-contact__box contact">
             <div class="contact__wrapper">
@@ -161,7 +287,7 @@
                   <span class="sectionTitle__sub">お問い合わせ</span>
                 </h2>
                 <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-                <div class="contact__button"><a href="#" class="button">view more</a></div>
+                <div class="contact__button"><a href="./page-contact.html" class="button">view more</a></div>
               </div>
 
             </div>
@@ -174,6 +300,87 @@
         </div>
       </div>
     </main>
-    <!-- フッターはあとから入れる -->
+    <footer class="footer footer--layout">
+      <div class="footer__inner inner">
+        <div class="footer__information">
+          <div class="footer__logo">
+            <a href="/"><img src="./assets/images/common/logo.svg" alt="ロゴ画像" /></a>
+          </div>
+          <div class="footer__sns">
+            <a href="#"><img src="./assets/images/common/facebook-icon.svg" alt="facebook" /></a>
+            <a href="#"
+              ><img src="./assets/images/common/instagram-icon.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
+        <nav class="footer__nav nav">
+          <div class="nav__wrapper">
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-campaign.html">キャンペーン</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ライセンス取得</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-about.html">私たちについて</a>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-information.html">ダイビング情報</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-information.html#licence">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#experience">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#fandiving">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./home.html">ブログ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-voice.html">お客様の声</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-price.html">料金一覧</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./page-price.html">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">ファンダイビング</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./page-faq.html">よくある質問</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-policy.html">プライバシー<span>ポリシー</span></a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-terms.html">利用規約</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-contact.html">お問い合わせ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-sitemap.html">サイトマップ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="footer__copy">
+          <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

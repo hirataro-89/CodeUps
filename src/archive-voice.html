@@ -39,7 +39,135 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-    <!-- ヘッダーはあとから入れる -->
+    <header class="header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="/"><img src="./assets/images/common/logo.svg" alt="ロゴ画像" /></a>
+        </h1>
+        <nav class="header__pcNav pcNav u-desktop">
+          <ul class="pcNav__list">
+            <li class="pcNav__item">
+              <a href="./archive-campaign.html">
+                <span class="pcNav__enItem">campaign</span>
+                <span class="pcNav__jpItem">キャンペーン</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-about.html">
+                <span class="pcNav__enItem">about&nbsp;us</span>
+                <span class="pcNav__jpItem">私たちについて</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./archive-information.html">
+                <span class="pcNav__enItem">information</span>
+                <span class="pcNav__jpItem">ダイビング情報</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./home.html">
+                <span class="pcNav__enItem">blog</span>
+                <span class="pcNav__jpItem">ブログ</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./archive-voice.html">
+                <span class="pcNav__enItem">voice</span>
+                <span class="pcNav__jpItem">お客様の声</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-price.html">
+                <span class="pcNav__enItem">price</span>
+                <span class="pcNav__jpItem">料金</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="./page-faq.html">
+                <span class="pcNav__enItem">FAQ</span>
+                <span class="pcNav__jpItem">よくある質問</span>
+              </a>
+            </li>
+            <li class="pcNav__item">
+              <a href="page-contact.html">
+                <span class="pcNav__enItem">contact</span>
+                <span class="pcNav__jpItem">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="header__spNav nav u-mobile js-nav">
+          <div class="nav__wrapper inner">
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-campaign.html">キャンペーン</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ライセンス取得</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-about.html">私たちについて</a>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-information.html">ダイビング情報</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-information.html#licence">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#experience">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#fandiving">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./home.html">ブログ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-voice.html">お客様の声</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-price.html">料金一覧</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./page-price.html">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">ファンダイビング</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./page-faq.html">よくある質問</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-policy.html">プライバシー<span>ポリシー</span></a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-terms.html">利用規約</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-contact.html">お問い合わせ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-sitemap.html">サイトマップ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- ハンバーガーメニュー -->
+        <div class="header__drawer js-drawer u-mobile" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
     <main class="main">
       <div class="sub-mainView sub-mainView--voice">
         <h1 class="sub-mainView__title">voice</h1>
@@ -49,16 +177,16 @@
           <div>top > お客様の声</div>
         </div>
       </div>
-      <div class="subVoice archive-voice">
+      <div class="subVoice page-sub">
         <div class="subVoice__inner inner subPage-inner">
           <ul class="subVoice__categories categories">
-            <li class="  categories__item--active"><a href="#">all</a></li>
+            <li class="categories__item is-active"><a href="#">all</a></li>
             <li class="categories__item"><a href="#">ライセンス講習</a></li>
             <li class="categories__item"><a href="#">ファンダイビング</a></li>
             <li class="categories__item"><a href="#">体験ダイビング</a></li>
           </ul>
           <div class="subVoice__items cards3">
-            <a href="#" class="cards3__item card3">
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -71,7 +199,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice1.webp" type="image/webp" />
                         <img
@@ -92,8 +220,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#" class="cards3__item card3">
+            </div>
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -106,7 +234,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice2.webp" type="image/webp" />
                         <img
@@ -127,8 +255,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#" class="cards3__item card3">
+            </div>
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -141,7 +269,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice4.webp" type="image/webp" />
                         <img
@@ -162,8 +290,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#" class="cards3__item card3">
+            </div>
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -176,7 +304,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice5.webp" type="image/webp" />
                         <img
@@ -197,8 +325,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#" class="cards3__item card3">
+            </div>
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -211,7 +339,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice3.webp" type="image/webp" />
                         <img
@@ -232,8 +360,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#" class="cards3__item card3">
+            </div>
+            <div class="cards3__item card3">
               <div class="card3__inner">
                 <div class="card3__body">
                   <div class="card3__head">
@@ -246,7 +374,7 @@
                         ここにタイトルが入ります。ここにタイトル
                       </h3>
                     </div>
-                    <div class="card3__image">
+                    <div class="card3__image js-slideImage">
                       <picture>
                         <source srcset="./assets/images/common/voice6.webp" type="image/webp" />
                         <img
@@ -267,7 +395,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <div class="subVoice__pagenavi wp-pagenavi">
@@ -281,7 +409,7 @@
           <a class="nextpostslink" rel="next" href="#"></a>
         </div>
       </div>
-      <section class="page-contact page-contact--layout">
+      <section class="page-contact page-contact--subLayout">
         <div class="page-contact__inner inner">
           <div class="page-contact__box contact">
             <div class="contact__wrapper">
@@ -312,9 +440,8 @@
                   <span class="sectionTitle__sub">お問い合わせ</span>
                 </h2>
                 <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-                <div class="contact__button"><a href="#" class="button">view more</a></div>
+                <div class="contact__button"><a href="./page-contact.html" class="button">view more</a></div>
               </div>
-
             </div>
           </div>
         </div>
@@ -326,77 +453,84 @@
       </div>
     </main>
     <footer class="footer footer--layout js-footer">
-      <div class="footer__bg">
-        <div class="footer__inner inner">
-          <div class="footer__information">
-            <div class="footer__logo"><a href="/"><img src="./assets/images/common/logo.svg" alt="ロゴ画像"></a></div>
-            <div class="footer__sns">
-              <a href="#"><img src="./assets/images/common/facebook-icon.svg" alt="facebook"></a>
-              <a href="#"><img src="./assets/images/common/instagram-icon.svg" alt="instagram"></a>
+      <div class="footer__inner inner">
+        <div class="footer__information">
+          <div class="footer__logo">
+            <a href="/"><img src="./assets/images/common/logo.svg" alt="ロゴ画像" /></a>
+          </div>
+          <div class="footer__sns">
+            <a href="#"><img src="./assets/images/common/facebook-icon.svg" alt="facebook" /></a>
+            <a href="#"
+              ><img src="./assets/images/common/instagram-icon.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
+        <nav class="footer__nav nav">
+          <div class="nav__wrapper">
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-campaign.html">キャンペーン</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ライセンス取得</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-about.html">私たちについて</a>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-information.html">ダイビング情報</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./archive-information.html#licence">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#experience">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./archive-information.html#fandiving">ファンダイビング</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="./home.html">ブログ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__block">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./archive-voice.html">お客様の声</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-price.html">料金一覧</a>
+                  <ul class="nav__categoryList">
+                    <li class="nav__categoryItem"><a href="./page-price.html">ライセンス講習</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">体験ダイビング</a></li>
+                    <li class="nav__categoryItem"><a href="./page-price.html">ファンダイビング</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./page-faq.html">よくある質問</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-policy.html">プライバシー<span>ポリシー</span></a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-terms.html">利用規約</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-contact.html">お問い合わせ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./page-sitemap.html">サイトマップ</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <nav class="footer__nav nav">
-            <div class="nav__wrapper">
-              <div class="nav__block">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="./archive-voice.html">キャンペーン</a>
-                    <ul class="nav__categoryList">
-                      <li class="nav__categoryItem"><a href="#">ライセンス取得</a></li>
-                      <li class="nav__categoryItem"><a href="#">貸切体験ダイビング</a></li>
-                      <li class="nav__categoryItem"><a href="#">ナイトダイビング</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav__item">
-                    <a href="./page-about.html">私たちについて</a>
-                  </li>
-                </ul>
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="#">ダイビング情報</a>
-                    <ul class="nav__categoryList">
-                      <li class="nav__categoryItem"><a href="#">ライセンス講習</a></li>
-                      <li class="nav__categoryItem"><a href="#">体験ダイビング</a></li>
-                      <li class="nav__categoryItem"><a href="#">ファンダイビング</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#">ブログ</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__block">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="#">お客様の声</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#">料金一覧</a>
-                    <ul class="nav__categoryList">
-                      <li class="nav__categoryItem"><a href="#">ライセンス講習</a></li>
-                      <li class="nav__categoryItem"><a href="#">体験ダイビング</a></li>
-                      <li class="nav__categoryItem"><a href="#">ファンダイビング</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="#">よくある質問</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#">プライバシー<span>ポリシー</span></a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#">利用規約</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#">お問い合わせ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <div class="footer__copy"><small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small></div>
+        </nav>
+        <div class="footer__copy">
+          <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
         </div>
       </div>
     </footer>

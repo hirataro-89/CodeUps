@@ -21,6 +21,11 @@
     height: 100%;
 }
 
+.subCard2__head {
+    display: flex;
+    flex-direction: column;
+}
+
 .subCard2__date {
     font-family: $second-font-family;
     font-size: rem(12);

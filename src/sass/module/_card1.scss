@@ -3,7 +3,6 @@
 .card1 {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    height: 100%;
     flex-direction: column-reverse;
     background-color: $white;
 }
@@ -22,6 +21,19 @@
     }
 }
 
+.card1__body--small {
+    padding: rem(16) rem(23) rem(24) rem(23);
+    @include mq(md) {
+        padding: rem(16) rem(23) rem(24) rem(23);
+    }
+}
+
+.card1__body--large {
+    @include mq(md) {
+        padding: rem(24) rem(24) rem(40);
+    }
+}
+
 .card1__title {
     font-weight: $medium;
     font-size: rem(16);
@@ -31,8 +43,18 @@
     }
 }
 
+.card1__title--large {
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
 .card1__title--center {
     text-align: center;
+    margin-top: 0;
+    @include mq(md) {
+        margin-top: 0;
+    }
 }
 
 .card1__content {
@@ -68,6 +90,12 @@
     }
 }
 
+.card1__priceBefore--small {
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
 .card1__priceNow {
     font-size: rem(32);
     color: $accent-color;
@@ -77,12 +105,22 @@
     }
 }
 
-.card1__description {
-    margin-top: rem(24);
+.card1__priceNow--small {
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
-.card1__description-text {
 
+.card1__priceNow--large {
+    @include mq(md) {
+        margin-left: rem(40);
+    }
+}
+
+
+.card1__description {
+    margin-top: rem(24);
 }
 
 .card1__meta {
@@ -114,6 +152,10 @@
 .card1__image {
     aspect-ratio: 280 / 188;
     overflow: hidden;
+}
+
+.card1__image--small {
+    aspect-ratio: 294 / 188;
 }
 
 .card1__image img {
